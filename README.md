@@ -1,23 +1,25 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
+`CURSO: ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`DISCIPLINA`
+`DISCIPLINA: Projeto - Desenvolvimento de uma Aplicação Interativa`
 
-`SEMESTRE`
+`SEMESTRE: 2022.1`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O foco do trabalho está em melhorar a produtividade da administração, de forma geral, em igrejas. Auxiliando na organização e filtro de membros, através de funcionalidades, como: gerador de tabelas com status do fiel, mostrando sua frequência e dados em geral.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Ana Beatriz Magnavacca de Abreu
+* Jhonata Jackson Monteiro Motta
+* Kaio Henrik de Paula Silva
+* Meriane dos Reis Dias
+* Thiago Roberto de Souza 
+
 
 ## Orientador
 
-* Nome completo do professor 1
+* Carlos Pietrobon 
 
 ## Instruções de utilização
 
@@ -43,8 +45,8 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 # Código
 
-<li><a href="src/README.md"> Código Fonte</a></li>
+<li><a href="src/README.md">Código Fonte</a></li>
 
 # Apresentação
 
-<li><a href="presentation/README.md"> Apresentação da solução</a></li>
+<li><a href="presentation/README.md">Apresentação da solução</a></li>
