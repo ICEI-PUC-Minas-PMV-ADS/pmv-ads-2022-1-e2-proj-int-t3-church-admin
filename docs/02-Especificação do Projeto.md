@@ -12,7 +12,10 @@ As personas estabelecidas durante o processo de entendimento do problema são ap
 |Ocupação:         | Secretário                                                                                                            |
 |Responsabilidades:| Cadastro e controle de membros da igreja                                                                              |
 |Problemas:        | Controlar o cadastro dos membros da igreja através de papéis <br  /> Dificuldade de manuseamento dos dados cadastrados|
-|Ambiente:         | Escritório da igreja                                                                                                  | 
+|Ambiente:         | Escritório da igreja                                                                                                  |
+|Hobbies:          | Viajar <br /> Tocar violão                                                                                            | 
+|Estilo de vida:   | Saudável                                                                                                              | 
+|Hábitos:          | Acordar cedo <br /> Pedalar pela manhã                                                                                | 
 
 |Secretário Geral  |                                                                                                                       |
 |------------------|-----------------------------------------------------------------------------------------------------------------------|
@@ -21,6 +24,9 @@ As personas estabelecidas durante o processo de entendimento do problema são ap
 |Responsabilidades:| Revisar membros cadastrados <br />Gerar relatórios de cadastro                                                        |
 |Problemas:        | Falta de controle administrativo dos membros                                                                          |
 |Ambiente:         | Escritório da igreja                                                                                                  | 
+|Hobbies:          | Cozinhar <br /> Estudar sobre investimentos                                                                           | 
+|Estilo de vida:   | Minimalista                                                                                                           | 
+|Hábitos:          | Passear com a família <br /> Ler no mínimo dois livros por mês                                                        | 
 
 ## Histórias de Usuários
 
