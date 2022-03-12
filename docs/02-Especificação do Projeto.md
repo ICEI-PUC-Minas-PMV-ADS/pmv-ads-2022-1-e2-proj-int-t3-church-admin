@@ -13,7 +13,7 @@ As personas estabelecidas durante o processo de entendimento do problema são ap
 |Responsabilidades:| Cadastro e controle de membros da igreja                                                                              |
 |Problemas:        | Controlar o cadastro dos membros da igreja através de papéis <br  /> Dificuldade de manuseamento dos dados cadastrados|
 |Ambiente:         | Escritório da igreja                                                                                                  |
-|Hobbies:          | Viajar <br /> Tocar violão                                                                                            | 
+|Hobbies:          | Viajar com os amigos <br /> Tocar violão                                                                                            | 
 |Estilo de vida:   | Saudável                                                                                                              | 
 |Hábitos:          | Acordar cedo <br /> Pedalar pela manhã                                                                                | 
 
