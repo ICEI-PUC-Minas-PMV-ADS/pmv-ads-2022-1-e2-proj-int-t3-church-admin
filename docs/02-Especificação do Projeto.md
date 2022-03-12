@@ -10,10 +10,11 @@ As personas estabelecidas durante o processo de entendimento do problema são ap
 |------------------|-----------------------------------------------------------------------------------------------------------------------|
 |Idade:            | 31                                                                                                                    |
 |Ocupação:         | Secretário                                                                                                            |
+|Escolaridade:     | Superior completo                                                                                                     |
 |Responsabilidades:| Cadastro e controle de membros da igreja                                                                              |
 |Problemas:        | Controlar o cadastro dos membros da igreja através de papéis <br  /> Dificuldade de manuseamento dos dados cadastrados|
 |Ambiente:         | Escritório da igreja                                                                                                  |
-|Hobbies:          | Viajar com os amigos <br /> Tocar violão                                                                                            | 
+|Hobbies:          | Viajar com os amigos <br /> Tocar violão                                                                              | 
 |Estilo de vida:   | Saudável                                                                                                              | 
 |Hábitos:          | Acordar cedo <br /> Pedalar pela manhã                                                                                | 
 
@@ -21,6 +22,7 @@ As personas estabelecidas durante o processo de entendimento do problema são ap
 |------------------|-----------------------------------------------------------------------------------------------------------------------|
 |Idade:            | 40                                                                                                                    |
 |Ocupação:         | Secretário geral                                                                                                      |
+|Escolaridade:     | Superior completo                                                                                                     |
 |Responsabilidades:| Revisar membros cadastrados <br />Gerar relatórios de cadastro                                                        |
 |Problemas:        | Falta de controle administrativo dos membros                                                                          |
 |Ambiente:         | Escritório da igreja                                                                                                  | 
