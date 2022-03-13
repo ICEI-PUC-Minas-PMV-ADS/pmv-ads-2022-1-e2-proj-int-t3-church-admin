@@ -1,6 +1,6 @@
 # Introdução
 
-A religião está bastante presente na sociedade desde muito tempo e como sabemos as igrejas evangélicas assim como outras comunidades de fé são denominadas instituições que são organizadas por departamentos internos.Com essa evolução estrutural dentro das Igrejas, elas começam a ser equiparadas com organizações corporativas, necessitando de ferramentas modernas para sua evolução. Porém muitas igrejas não conseguiram acompanhar os avanços tecnológicos que nos auxiliam e nos trazem uma melhor produtividade em diversas atividades do nosso cotidiano.
+A religião está bastante presente na sociedade desde muito tempo e como sabemos as igrejas evangélicas assim como outras comunidades de fé são denominadas instituições que são organizadas por departamentos internos. Com essa evolução estrutural dentro das Igrejas, elas começam a ser equiparadas com organizações corporativas, necessitando de ferramentas modernas para sua evolução. Porém muitas igrejas não conseguiram acompanhar os avanços tecnológicos que nos auxiliam e nos trazem uma melhor produtividade em diversas atividades do nosso cotidiano.
 Tendo em vista essa situação, esse projeto tem como objetivo sanar algumas dessas dificuldades.
 
 ## Problema
