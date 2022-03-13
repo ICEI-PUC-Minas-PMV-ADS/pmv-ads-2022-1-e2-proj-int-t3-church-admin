@@ -19,6 +19,6 @@ O projeto se justifica na atualização tecnológica das igrejas que serão capa
 
 O foco desse projeto são igrejas do meio evangélico visando todas as denominações.
 
-## Vídeo de Apresentação da Solução
+## Vídeo - Introdução
 
 https://user-images.githubusercontent.com/87099736/158074432-b3086da1-5f57-43f1-948b-f498f3f252f4.mp4
