@@ -56,7 +56,7 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |RF-004    | O sistema deve ser capaz de deletar os dados dos membros da igreja | ALTA |
 |RF-005    | O sistema deve ser capaz de filtrar por idade, status,filial e situação de batismo | MÉDIA |
 |RF-006    | O sistema deve ser capaz exportar os dados em PDF ou XLSX | MÉDIA |
-|RF-007    | O sistema deve conter uma interface administrativa | ALTA |
+|RF-007    | O sistema deve permitir o acesso dos usuários através do login e senha | ALTA |
 
 ### Requisitos não Funcionais
 
@@ -68,6 +68,7 @@ A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá 
 |RNF-002| O sistema deverá ser responsivo permitindo a visualização em um celular de forma adequada | ALTA | 
 |RNF-003| O sistema deve ter bom nível de contraste entre os elementos da tela em conformidade | MÉDIA | 
 |RNF-004| O sistema deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge, Safari) | ALTA | 
+|RF-005 | O sistema deve conter uma interface administrativa | ALTA |
 
 ## Restrições
 
