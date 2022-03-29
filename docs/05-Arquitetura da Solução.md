@@ -6,11 +6,14 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 
 
-## Modelo ER e Esquema Relacional
+## Modelo ER 
 
 No Diagrama ER define-se o relacionamento e as dependências das entidades que compõem o sistema. Nesse diagrama são informadas as chaves primárias e chaves estrangeiras, como a cardinalidade entre as entidades. 
 
 ![Diagrama ER](img/diagramaer.jpeg)
+
+## Esquema Relacional
+
 
 
 ## Tecnologias Utilizadas
