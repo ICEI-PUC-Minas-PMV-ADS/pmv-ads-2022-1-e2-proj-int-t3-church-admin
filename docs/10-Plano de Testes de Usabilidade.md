@@ -146,6 +146,11 @@ A interface deve conter diálogos que contenham somente informações relevantes
 
 Pode ser necessário fornecer documentação para ajudar os usuários a entender como concluir suas tarefas. O conteúdo de ajuda e documentação deve ser fácil de pesquisar e focado na tarefa do usuário.
 
+Abaixo a tabela mostra como realizar um teste de usabilidade atrvés de pontuação.
+
+
+![](img/Teste-de-Usabilidade.png)
+
 
 
 
