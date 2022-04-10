@@ -11,6 +11,6 @@ Serão apresentados cenários de testes em que demonstrem os requisitos sendo sa
 |T-05      |Cadastro                          | Dados do cadastro estão sendo registrados no banco de dados?        |                    |
 |T-06      |Checagem de informações inseridas | Confirmação dos dados inseridos está sendo realizada?               |                    |
 
-Será utilizado o teste de unidade, pois assim podemos testar unidades menores e de modo isolado, podendo dar um atenção a mais pra cada uma, de forma separada.
+Será utilizado o teste de unidade, pois assim podemos testar unidades menores e de modo isolado.
 
 Se tratando quanto ao sistema métrico, utilizaremos uma pontuação de 0 (insatisfatório) até 5 (muito satisfatório).
