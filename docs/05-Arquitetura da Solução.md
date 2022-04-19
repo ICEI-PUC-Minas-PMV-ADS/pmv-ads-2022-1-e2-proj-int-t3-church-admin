@@ -1,25 +1,27 @@
 # Arquitetura da Solução
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
-
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
-
 ## Diagrama de Classes
 
 O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Classes”.
+![Diagrama de Classes](img/DiagramaClasses.png)
 
-> -   [Diagramas de Classes - Documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.6.1?topic=diagrams-class)
 > -   [O que é um diagrama de classe UML? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
+> -   [Diagramas de Classes - Documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.6.1?topic=diagrams-class)
 
-## Modelo ER
 
-O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.]
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER”.
+## Modelo ER 
 
-> -   [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
+No Modelo ER define-se o relacionamento e as dependências das entidades que compõem o sistema. Nessa modelagem são informadas as chaves primárias e chaves estrangeiras.
+
+![Modelo ER](img/MeR.png)
+
+## Diagrama Esquema Relacional
+
+O Diagrama ER ilustra como as entidades se relacionam entre sim, atraves de suas cardinalidades. Além de informar os atributos de cada entidade. 
+
+![Diagrama ER](img/DER.jpg)
 
 ## Tecnologias Utilizadas
 
@@ -29,11 +31,10 @@ Apresente também uma figura explicando como as tecnologias estão relacionadas 
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
 
 > **Links Úteis**:
 >
-> -   [Website com GitHub Pages](https://pages.github.com/)
-> -   [Programação colaborativa com Repl.it](https://repl.it/)
-> -   [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> -   [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+> - [Website com GitHub Pages](https://pages.github.com/)
+> - [Programação colaborativa com Repl.it](https://repl.it/)
+> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
+> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
