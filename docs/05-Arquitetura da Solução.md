@@ -6,6 +6,8 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 ![Diagrama de Classes](img/DiagramaClasses.png)
 
+> -   [O que é um diagrama de classe UML? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
+> -   [Diagramas de Classes - Documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.6.1?topic=diagrams-class)
 
 
 
@@ -30,3 +32,9 @@ Apresente também uma figura explicando como as tecnologias estão relacionadas 
 ## Hospedagem
 
 
+> **Links Úteis**:
+>
+> - [Website com GitHub Pages](https://pages.github.com/)
+> - [Programação colaborativa com Repl.it](https://repl.it/)
+> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
+> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
