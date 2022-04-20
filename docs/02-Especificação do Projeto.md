@@ -68,7 +68,7 @@ A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá 
 |RNF-002| O sistema deverá ser responsivo permitindo a visualização em um celular de forma adequada | ALTA | 
 |RNF-003| O sistema deve ter bom nível de contraste entre os elementos da tela em conformidade | MÉDIA | 
 |RNF-004| O sistema deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge, Safari) | ALTA | 
-|RF-005 | O sistema deve conter uma interface administrativa | ALTA |
+
 
 ## Restrições
 
