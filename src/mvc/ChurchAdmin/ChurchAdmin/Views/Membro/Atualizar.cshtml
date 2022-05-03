@@ -1,0 +1,121 @@
+﻿@model MembroModel
+@{
+    ViewData["Title"] = "Atualizar contato";
+}
+
+
+<div class="text-center">
+
+    <h1 class="display-4">Atualizar contato</h1>
+
+</div>
+
+
+<form asp-controller="Membro" asp-action="Atualizar" method="post">
+
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome de cadastro">
+    </div>
+
+    <div class="form-group">
+        <label for="cpf">Cpf</label>
+        <input type="text" asp-for="Cpf" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+    <div class="form-group">
+        <label for="nascimento">Nascimento</label>
+        <input type="text" asp-for="Nascimento" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+    <div class="form-group">
+        <label for="sexo">Sexo</label>
+        <input type="text" asp-for="Sexo" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+    <div class="form-group">
+        <label for="cep">Cep</label>
+        <input type="text" asp-for="Cep" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+
+    <div class="form-group">
+        <label for="endereco">Endereco</label>
+        <input type="text" asp-for="Endereco" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+    <div class="form-group">
+        <label for="numero">Numero</label>
+        <input type="text" asp-for="Numero" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+    <div class="form-group">
+        <label for="complemento">Complemento</label>
+        <input type="text" asp-for="Complemento" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+
+    <div class="form-group">
+        <label for="bairro">Bairro</label>
+        <input type="text" asp-for="Bairro" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+    <div class="form-group">
+        <label for="municipio">Municipio</label>
+        <input type="text" asp-for="Municipio" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+    <div class="form-group">
+        <label for="estado">Estado</label>
+        <input type="text" asp-for="Estado" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+
+    <div class="form-group">
+        <label for="fone">Fone</label>
+        <input type="text" asp-for="Fone" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" asp-for="Email" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+    <div class="form-group">
+        <label for="naturalidade">Naturalidade</label>
+        <input type="text" asp-for="Naturalidade" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+    <div class="form-group">
+        <label for="estadoCivil">Estado Civil</label>
+        <input type="text" asp-for="EstadoCivil" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+    <div class="form-group">
+        <label for="profissao">Profissao</label>
+        <input type="text" asp-for="Profissao" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+    <div class="form-group">
+        <label for="igreja">Igreja</label>
+        <input type="text" asp-for="Igreja" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+    <div class="form-group">
+        <label for="dataBatismo">Data de Batismo</label>
+        <input type="text" asp-for="DataBatismoAguas" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+    <div class="form-group">
+        <label for="cargoIgreja">Cargo Igreja</label>
+        <input type="text" asp-for="CargoIgreja" class="form-control" placeholder="Digite o  de cadastro">
+    </div>
+
+     <div class="form-group">
+        <label for="status">Status</label>
+        <input type="text" asp-for="Status" class="form-control" placeholder="Digite o nome de cadastro">
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+    <a class="btn btn-secondary btn-block" asp-controller="Membro" asp-action="Index" role="button">Voltar</a>
+</form>

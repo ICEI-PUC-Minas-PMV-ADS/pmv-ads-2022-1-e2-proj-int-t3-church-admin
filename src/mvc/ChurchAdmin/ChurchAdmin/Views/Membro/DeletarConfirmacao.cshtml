@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Confirmação para deletar o membro";
+}
+
+<div class="text-center">
+    <h3>Realmente deseja deletar o membro? </h3>
+</div>
+
+<a class="btn btn-primary btn-block" role="button" asp-controller="Membro" asp-action="Index">Cancelar exclusão</a>
+<a class="btn btn-danger btn-block" role="button" asp-controller="Membro" asp-action="Deletar">Confirmar exclusão</a>
