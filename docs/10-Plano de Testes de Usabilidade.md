@@ -1,4 +1,5 @@
 # Plano de Testes de Usabilidade
+## Avaliação Dinâmica (feita pelo usuário que faz as transações - casos de uso)
 
 > - Objetivo do teste: Avaliar a usabilidade do software  
 
@@ -15,22 +16,17 @@
 
 ### Realizar os procedimentos das seguintes funcionalidades:  
 
-1)  Cadastrar Pessoa 
-    Realizar o preenchimento dos campos de Informações Pessoais e de Localidade da página de cadastro. Após preenchimento de todos os campos requeridos, o usuário         irá clicar no botão SALVAR.  
+1)  *Cadastrar Pessoa* : Realizar o preenchimento dos campos de *Informações Pessoais* e de *Localidade* da página de cadastro. Após preenchimento de todos os campos requeridos, o usuário     irá clicar no botão SALVAR.  
 
-2)  Deletar Pessoa 
-    Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar na lupa.  
+2)  *Deletar Pessoa* : Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar na lupa.  
     Após visualização dos dados, clicar no botão deletar e confirmar pergunta do pop-up, clicando novamente em um botão para a confirmação da ação de exclusão. 
 
-3)  Atualizar Pessoa 
-    Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar na lupa.  
+3)  *Atualizar Pessoa* : Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar na lupa.  
     Após visualização dos dados, clicar no botão atualizar e confirmar pergunta do pop-up, clicando novamente em um botão para a confirmação da ação de atualização.  
 
-4)  Selecionar Pessoa 
-    Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar na lupa. Visualizar os dados. 
+4)  *Selecionar Pessoa* : Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar na lupa. Visualizar os dados. 
 
-5)  Exportar dados 
-    Clicar no botão exportar, após fazer o passo 4 para selecionar os dados. Visualize o arquivo de retorno. 
+5)  *Exportar dados* : Clicar no botão exportar, após fazer o passo 4 para selecionar os dados. Visualize o arquivo de retorno. 
 
 
 ### Quais são as funcionalidades mais críticas: 
@@ -43,66 +39,58 @@ Deletar Pessoa: Mensagem de confirmação anteriormente à exclusão.
 
 Serão avaliados por nota, segundo as seguintes métricas: 
 
-1-  Péssimo (refazer funcionalidade) 
+Nota 1-  Péssimo (refazer funcionalidade) 
 
-2-  Ruim (refazer uma parte da funcionalidade) 
+Nota 2-  Ruim (refazer uma parte da funcionalidade) 
 
-3-  Mediano (alterações pontuais) 
+Nota 3-  Mediano (alterações pontuais) 
 
-4-  Muito bom (experimentar e iterar) 
+Nota 4-  Muito bom (experimentar e iterar) 
 
-5-  Excelente (pronto para testar em produção) 
+Nota 5-  Excelente (pronto para testar em produção) 
 
 ### CADASTRAR
-|                ASPECTO                |          AVALIAÇÃO (DE 1 A 5)             |              CONSIDERAÇÕES/MELHORIAS                        |
-|---------------------------------------|-------------------------------------------|-------------------------------------------------------------|
-|CAMPOS REQUIRED BEM DEFINIDOS          |                                           |                                                             |
-|AUXÍLIO DE FORMATAÇÃO (CAMPO CELULAR)  |                                           |                                                             |
-|AUXÍLIO DE FORMATAÇÃO (CAMPO DATA)     |                                           |                                                             |
-|AUXÍLIO DE FORMATAÇÃO (CAMPO CPF)      |                                           |                                                             |
-|AUXÍLIO DE FORMATAÇÃO (CAMPO CEP)      |                                           |                                                             |
-|AUTOCOMPLETE (ENDEREÇO)                |                                           |                                                             |
-|MENSAGEM DE RETORNO (BOTÃO SALVAR)     |                                           |                                                             |
-|NAVEGAÇÃO DE LINKS DO MENU LATERAL     |                                           |                                                             |
+|        ATIVIDADE A SER REALIZADA      | FEEDBACK DO USUÁRIO  |    CONSIDERAÇÕES    |   SUGESTÃO DE MELHORIAS | AVALIAÇÃO (DE 1 A 5)  |
+|---------------------------------------|----------------------|---------------------|-------------------------|-----------------------|
+|Cadastrar membro                       |                      |                     |                         |                       |
+|Cadastrar membro                       |                      |                     |                         |                       |
+|Cadastrar membro                       |                      |                     |                         |                       |
+|Cadastrar membro                       |                      |                     |                         |                       |
 
 
 ### CONSULTAR
-|                ASPECTO                |          AVALIAÇÃO (DE 1 A 5)             |              CONSIDERAÇÕES/MELHORIAS                        |
-|---------------------------------------|-------------------------------------------|-------------------------------------------------------------|
-|SELEÇÃO DO TIPO DE FILTRO (SELECT)     |                                           |                                                             |
-|CAMPO PARA BUSCA DE DADOS              |                                           |                                                             |
-|VISUALIZAÇÃO DO RETORNO DA BUSCA       |                                           |                                                             |
-|AÇÃO EDITAR                            |                                           |                                                             |
-|AÇÃO DELETAR                           |                                           |                                                             |
-|AÇÃO VISUALIZAR                        |                                           |                                                             |
-|AÇÃO EXPORTAR                          |                                           |                                                             |
-|RETORNO (AÇÃO EDITAR)                  |                                           |                                                             |
-|RETORNO (AÇÃO DELETAR)                 |                                           |                                                             |
-|RETORNO (AÇÃO VISUALIZAR)              |                                           |                                                             |
-|RETORNO (AÇÃO EXPORTAR)                |                                           |                                                             |
-|MENSAGEM DE CONFIRMAÇÃO (AÇÕES)        |                                           |                                                             |
+|        ATIVIDADE A SER REALIZADA      | FEEDBACK DO USUÁRIO  |    CONSIDERAÇÕES    |   SUGESTÃO DE MELHORIAS | AVALIAÇÃO (DE 1 A 5)  |
+|---------------------------------------|----------------------|---------------------|-------------------------|-----------------------|
+|Consultar membro                       |                      |                     |                         |                       |
+|Consultar membro                       |                      |                     |                         |                       |
+|Consultar membro                       |                      |                     |                         |                       |
+|Consultar membro                       |                      |                     |                         |                       |
+
 
 
 ### LOGIN
-|                ASPECTO                |          AVALIAÇÃO (DE 1 A 5)             |              CONSIDERAÇÕES/MELHORIAS                        |
-|---------------------------------------|-------------------------------------------|-------------------------------------------------------------|
-|INSTRUÇÕES PARA NOME DO USUÁRIO (MÍN)  |                                           |                                                             |
-|INSTRUÇÕES PARA SENHA                  |                                           |                                                             |
-|MÁSCARA PARA PROTEÇÃO DE SENHA         |                                           |                                                             |
-|BOTÃO ENTRAR                           |                                           |                                                             |
-|REDIRECIONAMENTO DE TELA               |                                           |                                                             |
-|INFORMAÇÕES DO PERFIL                  |                                           |                                                             |
-
+|        ATIVIDADE A SER REALIZADA      | FEEDBACK DO USUÁRIO  |    CONSIDERAÇÕES    |   SUGESTÃO DE MELHORIAS | AVALIAÇÃO (DE 1 A 5)  |
+|---------------------------------------|----------------------|---------------------|-------------------------|-----------------------|
+|Login membro                           |                      |                     |                         |                       |
+|Login membro                           |                      |                     |                         |                       |
+|Login membro                           |                      |                     |                         |                       |
+|Login membro                           |                      |                     |                         |                       |
 
 ### INFORMAÇÕES DETALHADAS E DASHBOARD
-|                ASPECTO                |          AVALIAÇÃO (DE 1 A 5)             |              CONSIDERAÇÕES/MELHORIAS                        |
-|---------------------------------------|-------------------------------------------|-------------------------------------------------------------|
-|VISUALIZAÇÃO DOS DADOS                 |                                           |                                                             |
-|IMPORTÂNCIA DOS DADOS DISPOSTOS        |                                           |                                                             |
-|GRÁFICOS E QUADROS DE VISUALIZAÇÃO     |                                           |                                                             |
+|        ATIVIDADE A SER REALIZADA      | FEEDBACK DO USUÁRIO  |    CONSIDERAÇÕES    |   SUGESTÃO DE MELHORIAS | AVALIAÇÃO (DE 1 A 5)  |
+|---------------------------------------|----------------------|---------------------|-------------------------|-----------------------|
+|Visualizar membro                      |                      |                     |                         |                       |
+|Visualizar membro                      |                      |                     |                         |                       |
+|Visualizar membro                      |                      |                     |                         |                       |
+|Visualizar membro                      |                      |                     |                         |                       |
 
 
-**Teste de Usabilidade (Heurísticas)**
+
+&nbsp;
+
+## Avaliação Estática (Heuríticas de Nielsen)
+
+Teste de Usabilidade (Heurísticas)
 
 De uma forma geral, a heurística tem como objetivo reduzir a carga cognitiva do usuário, diminuindo o tempo de tomada de decisão fazendo com que as experiências sejam mais apropriadas e menos cansativas.
 
