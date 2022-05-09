@@ -2,6 +2,7 @@
 {
     public class Membro
     {
+        public int Matricula { get; set; }
         public string Cpf { get; set; }
         public string Nome { get; set; }
         public string Cep { get; set; }
@@ -20,7 +21,7 @@
         public string Profissao { get; set; }
         public string DataBatismoAguas { get; set; }
         public string CargoIgreja { get; set; }
-        public string Igreja { get; set; }
+        public int IgrejaID { get; set; }
         public bool Status { get; set; }
     }
 }

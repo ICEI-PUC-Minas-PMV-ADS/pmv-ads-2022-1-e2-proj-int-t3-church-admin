@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ADS\\ChurchAdminAPI\\ChurchAdminAPI\\ChurchAdminAPI.csproj": {}
+    "C:\\Users\\Meriane\\Documents\\github\\pmv-ads-2022-1-e2-proj-int-t3-church-admin\\src\\API\\ChurchAdminAPI\\ChurchAdminAPI\\ChurchAdminAPI.csproj": {}
   },
   "projects": {
-    "C:\\ADS\\ChurchAdminAPI\\ChurchAdminAPI\\ChurchAdminAPI.csproj": {
+    "C:\\Users\\Meriane\\Documents\\github\\pmv-ads-2022-1-e2-proj-int-t3-church-admin\\src\\API\\ChurchAdminAPI\\ChurchAdminAPI\\ChurchAdminAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ADS\\ChurchAdminAPI\\ChurchAdminAPI\\ChurchAdminAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Meriane\\Documents\\github\\pmv-ads-2022-1-e2-proj-int-t3-church-admin\\src\\API\\ChurchAdminAPI\\ChurchAdminAPI\\ChurchAdminAPI.csproj",
         "projectName": "ChurchAdminAPI",
-        "projectPath": "C:\\ADS\\ChurchAdminAPI\\ChurchAdminAPI\\ChurchAdminAPI.csproj",
+        "projectPath": "C:\\Users\\Meriane\\Documents\\github\\pmv-ads-2022-1-e2-proj-int-t3-church-admin\\src\\API\\ChurchAdminAPI\\ChurchAdminAPI\\ChurchAdminAPI.csproj",
         "packagesPath": "C:\\Users\\Meriane\\.nuget\\packages\\",
-        "outputPath": "C:\\ADS\\ChurchAdminAPI\\ChurchAdminAPI\\obj\\",
+        "outputPath": "C:\\Users\\Meriane\\Documents\\github\\pmv-ads-2022-1-e2-proj-int-t3-church-admin\\src\\API\\ChurchAdminAPI\\ChurchAdminAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

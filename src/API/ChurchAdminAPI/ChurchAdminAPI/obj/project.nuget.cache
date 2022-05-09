@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JHdLt58rCUZGzXe0d44Qi1KtGKWKwX8LCeHL5YQua+4+6O1GBtZHokdZLqyxTcmtSrxVDhKtL6ezB1oB3e6ksw==",
+  "dgSpecHash": "WIMdnnYPoEsA75Vm6HyEBSr2PYLWH5UG/N6bkwHDh9x0k4NtcwwtDAqkjJ/Klf0fk/Hy3Ybrtj1BkFRA+dhoig==",
   "success": true,
-  "projectFilePath": "C:\\ADS\\ChurchAdminAPI\\ChurchAdminAPI\\ChurchAdminAPI.csproj",
+  "projectFilePath": "C:\\Users\\Meriane\\Documents\\github\\pmv-ads-2022-1-e2-proj-int-t3-church-admin\\src\\API\\ChurchAdminAPI\\ChurchAdminAPI\\ChurchAdminAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Meriane\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Meriane\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

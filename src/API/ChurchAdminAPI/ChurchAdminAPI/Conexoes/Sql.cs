@@ -15,7 +15,7 @@ namespace ChurchAdminAPI.Conexoes
         }
 
 
-        //CRUD MEMBRO
+        // MEMBRO
         public void CadastrarMembro(Models.Membro membro)
         {
             try
@@ -41,7 +41,7 @@ namespace ChurchAdminAPI.Conexoes
                                 Profissao,
                                 DataBatismoAguas,
                                 CargoIgreja,
-                                Igreja,
+                                IgrejaID,
                                 Status)
                                VALUES
                                 (@Cpf,
@@ -62,7 +62,7 @@ namespace ChurchAdminAPI.Conexoes
                                 @Profissao,
                                 @DataBatismoAguas,
                                 @CargoIgreja,
-                                @Igreja,
+                                @IgrejaID,
                                 @Status);";
 
                 using (SqlCommand cmd = new SqlCommand(sql, _conexao))
@@ -85,7 +85,7 @@ namespace ChurchAdminAPI.Conexoes
                     cmd.Parameters.AddWithValue("Profissao", membro.Profissao);
                     cmd.Parameters.AddWithValue("DataBatismoAguas", membro.DataBatismoAguas);
                     cmd.Parameters.AddWithValue("CargoIgreja", membro.CargoIgreja);
-                    cmd.Parameters.AddWithValue("Igreja", membro.Igreja);
+                    cmd.Parameters.AddWithValue("IgrejaID", membro.IgrejaID);
                     cmd.Parameters.AddWithValue("Status", membro.Status);
                     cmd.ExecuteNonQuery();
                 }
@@ -104,7 +104,9 @@ namespace ChurchAdminAPI.Conexoes
                 _conexao.Open();
 
                 string sql = @"UPDATE Membro
-                                SET Nome = @Nome,
+                                SET 
+                                Cpf = @Cpf,
+                                Nome = @Nome,
                                 Cep = @Cep ,
                                 Endereco = @Endereco,
                                 Numero = @Numero,
@@ -121,12 +123,13 @@ namespace ChurchAdminAPI.Conexoes
                                 Profissao = @Profissao,
                                 DataBatismoAguas = @DataBatismoAguas,
                                 CargoIgreja = @CargoIgreja,
-                                Igreja = @Igreja,
+                                IgrejaID = @IgrejaID,
                                 Status = @Status
-                                WHERE Cpf = @Cpf";
+                                WHERE Matricula = @Matricula";
 
                 using (SqlCommand cmd = new SqlCommand(sql, _conexao))
                 {
+                    cmd.Parameters.AddWithValue("Matricula", membro.Matricula);
                     cmd.Parameters.AddWithValue("Cpf", membro.Cpf);
                     cmd.Parameters.AddWithValue("Nome", membro.Nome);
                     cmd.Parameters.AddWithValue("Cep", membro.Cep);
@@ -145,7 +148,7 @@ namespace ChurchAdminAPI.Conexoes
                     cmd.Parameters.AddWithValue("Profissao", membro.Profissao);
                     cmd.Parameters.AddWithValue("DataBatismoAguas", membro.DataBatismoAguas);
                     cmd.Parameters.AddWithValue("CargoIgreja", membro.CargoIgreja);
-                    cmd.Parameters.AddWithValue("Igreja", membro.Igreja);
+                    cmd.Parameters.AddWithValue("IgrejaID", membro.IgrejaID);
                     cmd.Parameters.AddWithValue("Status", membro.Status);
                     cmd.ExecuteNonQuery();
 
@@ -203,6 +206,7 @@ namespace ChurchAdminAPI.Conexoes
                     while (rdr.Read())
                     {
                         var membro = new Models.Membro();
+                        membro.Matricula = Convert.ToInt32(rdr["Matricula"]);
                         membro.Cpf = rdr["Cpf"].ToString();
                         membro.Nome = rdr["Nome"].ToString();
                         membro.Cep = rdr["Cep"].ToString();
@@ -221,7 +225,7 @@ namespace ChurchAdminAPI.Conexoes
                         membro.Profissao = rdr["Profissao"].ToString();
                         membro.DataBatismoAguas = rdr["DataBatismoAguas"].ToString();
                         membro.CargoIgreja = rdr["CargoIgreja"].ToString();
-                        membro.Igreja = rdr["Igreja"].ToString();
+                        membro.IgrejaID = Convert.ToInt32(rdr["IgrejaID"]);
                         membro.Status = Convert.ToBoolean(rdr["Status"]);
       
                         membros.Add(membro);
@@ -238,7 +242,7 @@ namespace ChurchAdminAPI.Conexoes
         }
 
 
-        //CRUD IGREJA
+        // IGREJA
         public void CadastrarIgreja(Models.Igreja igreja)
         {
             try
