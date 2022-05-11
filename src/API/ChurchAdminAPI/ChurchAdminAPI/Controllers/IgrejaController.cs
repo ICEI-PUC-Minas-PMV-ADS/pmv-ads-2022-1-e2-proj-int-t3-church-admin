@@ -5,7 +5,7 @@ using System;
 
 namespace ChurchAdminAPI.Controllers
 {
-    [EnableCors("MyPolicy")]
+    [EnableCors("LiberarTudo")]
     [ApiController]
     public class IgrejaController : ControllerBase
     {

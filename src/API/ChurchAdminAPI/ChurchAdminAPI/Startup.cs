@@ -33,12 +33,13 @@ namespace ChurchAdminAPI
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ChurchAdminAPI", Version = "v1" });
             });
 
-            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            services.AddCors(options =>
             {
-                builder.WithOrigins("http://example.com")
-                       .AllowAnyMethod()
-                       .AllowAnyHeader();
-            }));
+                options.AddPolicy("LiberarTudo",
+                    builder => builder.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +55,7 @@ namespace ChurchAdminAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors("LiberarTudo");
 
             app.UseAuthorization();
 
