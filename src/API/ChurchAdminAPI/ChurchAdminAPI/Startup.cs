@@ -26,6 +26,12 @@ namespace ChurchAdminAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(o => o.AddPolicy("PermitirTudo", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -33,13 +39,7 @@ namespace ChurchAdminAPI
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ChurchAdminAPI", Version = "v1" });
             });
 
-            services.AddCors(options =>
-            {
-                options.AddPolicy("LiberarTudo",
-                    builder => builder.AllowAnyOrigin()
-                        .AllowAnyHeader()
-                        .AllowAnyMethod());
-            });
+         
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,7 +55,7 @@ namespace ChurchAdminAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseCors("LiberarTudo");
+            app.UseCors("PermitirTudo");
 
             app.UseAuthorization();
 
