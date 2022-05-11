@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
 namespace ChurchAdminAPI.Controllers
 {
+    [EnableCors("MyPolicy")]
     [ApiController]
     public class IgrejaController : ControllerBase
     {
