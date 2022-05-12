@@ -1,7 +1,6 @@
 
 # Metodologia
 
-A metodologia contempla as definições de ferramental utilizado pela equipe tanto para a manutenção dos códigos e demais artefatos quanto para a organização do time na execução das tarefas do projeto.
 
 ## Controle de Versão
 
@@ -61,7 +60,13 @@ O quadro kanban do grupo no Trello está disponível através da URL <https://tr
 
 O plano de sprint utilizado para guiar o grupo foi utilizado seguindo o sugerido pela própria instituição da PUC, conforme mostrado abaixo:
 
+Plano seguido para segunda etapa:
+
 ![Plano de Sprint](img/plano-sprint.png)
+
+Plano seguido para terceira etapa:
+
+![Plano de Sprint](img/plano-sprint_2.jpg)
 
 Após ter sido feita a análise das informações acima, criamos todo o gerenciamento do projeto no Trello, conforme mostrado abaixo:
 

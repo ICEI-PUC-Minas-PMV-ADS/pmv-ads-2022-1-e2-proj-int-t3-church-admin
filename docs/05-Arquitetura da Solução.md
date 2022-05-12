@@ -6,10 +6,6 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 ![Diagrama de Classes](img/DiagramaClasses.png)
 
-> -   [O que é um diagrama de classe UML? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
-> -   [Diagramas de Classes - Documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.6.1?topic=diagrams-class)
-
-
 
 ## Modelo ER 
 
