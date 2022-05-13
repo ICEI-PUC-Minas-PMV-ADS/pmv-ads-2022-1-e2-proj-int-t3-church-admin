@@ -12,11 +12,6 @@ import axios from "axios";
 const Products = function () {
 
     async function test() {
-        // const baseURL = "https://localhost:5001/v1/ListarMembros"
-        // await axios.get(baseURL).then((response) => {
-        //     console.log(response.data)
-        //   });
-
         const { name, email, sexo } = formValue;
         console.log(">>>>>> ", formValue)
     }
@@ -68,8 +63,6 @@ const Products = function () {
     
     const handleChange = (event) => {
         const { name, value } = event.target;
-        // console.log(">>>>> name", name)
-        // console.log(">>>>> value", value)
         setFormValue((prevState) => {
             return {
             ...prevState,
