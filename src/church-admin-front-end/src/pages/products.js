@@ -15,6 +15,7 @@ const Products = function () {
         console.log(">>>>>> ", formValue)
     }
     const [membro, setMembro] = useState(null)
+    const [loading, setLoading] = useState("false")
     const [formValue, setFormValue] = useState({
         nome: "",
         email: "",
@@ -50,8 +51,34 @@ const Products = function () {
     };
 
     async function getStorageInformations() {
-       let membro = await localStorage.getItem("current")
-       console.log(">>>>>>> membro", JSON.parse(membro))
+        setLoading(true);
+       let membro = JSON.parse(await localStorage.getItem("current"))
+       if(membro) {
+        setFormValue({
+            nome: membro.nome,
+            email: membro.email,
+            fone: membro.fone,
+            nascimento: membro.nascimento,
+            profissao: membro.profissao,
+            sexo: membro.sexo,
+            estadoCivil: membro.estadoCivil,
+            cpf: membro.cpf,
+            naturalidade: membro.naturalidade,
+            cep: membro.cep,
+            endereco: membro.endereco,
+            numero: membro.numero,
+            complemento: membro.complemento,
+            bairro: membro.bairro,
+            municipio: membro.municipio,
+            batismo: membro.batismo,
+            estado: membro.estado,
+            igrejaID: membro.igrejaID,
+            cargoIgreja: membro.cargoIgreja,
+            dataBatismoAguas: membro.dataBatismoAguas,
+        })
+        localStorage.removeItem("current");
+       }
+        setLoading(false);
     }
 
     useEffect(() => {
@@ -100,6 +127,7 @@ const Products = function () {
                             variant="outlined" 
                             style={{marginBottom: 25}}
                             name="nome"
+                            value={formValue.nome}
                             onChange={handleChange}
                             />
                             <TextField 
@@ -109,6 +137,7 @@ const Products = function () {
                             variant="outlined" 
                             style={{marginBottom: 25}}
                             name="email"
+                            value={formValue.email}
                             onChange={handleChange}
                             />
                              <TextField 
@@ -118,6 +147,7 @@ const Products = function () {
                             variant="outlined" 
                             style={{marginBottom: 25}}
                             name="fone"
+                            value={formValue.fone}
                             onChange={handleChange}
                             />
                              <TextField 
@@ -127,6 +157,7 @@ const Products = function () {
                             variant="outlined" 
                             style={{marginBottom: 25}}
                             name="nascimento"
+                            value={formValue.nascimento}
                             onChange={handleChange}
                             />
                              <TextField 
@@ -136,6 +167,7 @@ const Products = function () {
                             variant="outlined" 
                             style={{marginBottom: 25}}
                             name="profissao"
+                            value={formValue.profissao}
                             onChange={handleChange}
                             />
       
@@ -143,10 +175,11 @@ const Products = function () {
                               <FormControl>
                                   <FormLabel id="demo-radio-buttons-group-label">Sexo</FormLabel>
                                   <RadioGroup
-                                      aria-labelledby="demo-radio-buttons-group-label"
-                                      defaultValue="female"
-                                      name="radio-buttons-group"
-                                      row
+                                        aria-labelledby="demo-radio-buttons-group-label"
+                                        defaultValue="female"
+                                        name="radio-buttons-group"
+                                        row
+                                        value={formValue.sexo}
                                   >
                                       <FormControlLabel value="F" control={<Radio />} label="Feminino"  onChange={handleChange} name="sexo" />
                                       <FormControlLabel value="M" control={<Radio />} label="Masculino" onChange={handleChange} name="sexo" />
@@ -158,7 +191,7 @@ const Products = function () {
                                   <Select
                                       labelId="demo-simple-select-autowidth-label"
                                       id="demo-simple-select-autowidth"
-                                      value={formValue.batismo}
+                                      value={formValue.dataBatismoAguas ? "sim" : "nao"}
                                       input={<OutlinedInput label="Status de Batismo" />}
                                       label="Age"
                                       onChange={handleChange}
@@ -188,21 +221,21 @@ const Products = function () {
                               </Select>
                           </FormControl>
       
-                          <TextField fullWidth id="outlined-basic" label="CPF" variant="outlined" name="cpf" onChange={handleChange} style={{marginBottom: 25}} />
-                          <TextField fullWidth id="outlined-basic" label="Naturalidade" variant="outlined" name="naturalidade" onChange={handleChange} />
+                          <TextField fullWidth id="outlined-basic" label="CPF" variant="outlined" name="cpf" onChange={handleChange} style={{marginBottom: 25}} value={formValue.cpf}/>
+                          <TextField fullWidth id="outlined-basic" label="Naturalidade" variant="outlined" name="naturalidade" onChange={handleChange} value={formValue.naturalidade} />
                       </Grid>
                       <Grid item xs={6} style={{borderTopColor: "#000000", borderTopStyle: "solid", borderTopWidth: 5}}>
                           <h2 style={{marginBottom: 25}}>Localização</h2>
-                          <TextField fullWidth id="outlined-basic" label="CEP" variant="outlined" name="cep" onChange={handleChange} style={{marginBottom: 25}} />
-                          <TextField fullWidth id="outlined-basic" label="Endereço" variant="outlined" name="endereco" onChange={handleChange} style={{marginBottom: 25}}/>
+                          <TextField fullWidth id="outlined-basic" label="CEP" variant="outlined" name="cep" onChange={handleChange} style={{marginBottom: 25}} value={formValue.cep} />
+                          <TextField fullWidth id="outlined-basic" label="Endereço" variant="outlined" name="endereco" onChange={handleChange} style={{marginBottom: 25}} value={formValue.endereco}/>
       
                           <Grid item xs={12} style={{display: "flex", justifyContent: "space-between", marginBottom: 25}}>
-                              <TextField id="outlined-basic" label="Número" variant="outlined" name="numero" onChange={handleChange} style={{width: "48%"}} />
-                              <TextField id="outlined-basic" label="Complemento" variant="outlined" name="complemento" onChange={handleChange} style={{width: "48%"}} />
+                              <TextField id="outlined-basic" label="Número" variant="outlined" name="numero" onChange={handleChange} style={{width: "48%"}} value={formValue.numero} />
+                              <TextField id="outlined-basic" label="Complemento" variant="outlined" name="complemento" onChange={handleChange} style={{width: "48%"}} value={formValue.complemento} />
                           </Grid>
                           <Grid item xs={12} style={{display: "flex", justifyContent: "space-between", marginBottom: 25}}>
-                              <TextField id="outlined-basic" label="Bairro" variant="outlined" name="bairro" onChange={handleChange} style={{width: "48%"}} />
-                              <TextField id="outlined-basic" label="Município" variant="outlined" name="municipio" onChange={handleChange} style={{width: "48%"}} />
+                              <TextField id="outlined-basic" label="Bairro" variant="outlined" name="bairro" onChange={handleChange} style={{width: "48%"}} value={formValue.bairro} />
+                              <TextField id="outlined-basic" label="Município" variant="outlined" name="municipio" onChange={handleChange} style={{width: "48%"}} value={formValue.municipio} />
                           </Grid>
                           <Grid item xs={12} style={{display: "flex", justifyContent: "space-between", marginBottom: 25}}>
                               <FormControl style={{width: "48%"}}>
@@ -240,8 +273,8 @@ const Products = function () {
                           </Grid>
                           <Grid item xs={12} style={{borderTopColor: "#000000", borderTopStyle: "solid", borderTopWidth: 5}}>
                              <h2 style={{marginTop: 25, marginBottom: 25}}>Dados Eclesiásticos</h2>
-                             <TextField fullWidth id="outlined-basic" label="Cargo Ministerial" variant="outlined" name="cargoIgreja" onChange={handleChange} style={{marginBottom: 25}}/>
-                             <TextField fullWidth id="outlined-basic" label="Data de Batismo" variant="outlined" name="dataBatismoAguas" onChange={handleChange} />
+                             <TextField fullWidth id="outlined-basic" label="Cargo Ministerial" variant="outlined" name="cargoIgreja" onChange={handleChange} style={{marginBottom: 25}} value={formValue.cargoIgreja}/>
+                             <TextField fullWidth id="outlined-basic" label="Data de Batismo" variant="outlined" name="dataBatismoAguas" onChange={handleChange} value={formValue.dataBatismoAguas}/>
                              <Grid xs={12} style={{display: "flex", justifyContent: "flex-end", alignItems: "center", flexDirection: "row", marginTop: 20}}>
                                 <Button onClick={save} variant="contained">Salvar</Button>
                              </Grid>
