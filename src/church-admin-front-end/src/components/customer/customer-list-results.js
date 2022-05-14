@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import PropTypes from 'prop-types';
 import { format } from 'date-fns';
@@ -21,6 +21,8 @@ import { getInitials } from '../../utils/get-initials';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import axios from "axios";
+
 
 export const CustomerListResults = ({ customers, ...rest }) => {
   console.log(">>>> ", customers)
@@ -67,6 +69,15 @@ export const CustomerListResults = ({ customers, ...rest }) => {
   const handlePageChange = (event, newPage) => {
     setPage(newPage);
   };
+
+  async function deleteMembro(membro) {
+    const baseURL = "https://localhost:5001/v1/DeletarMembro"
+    axios.delete(baseURL, { data: membro }).then(() => document.location.reload(true));
+  }
+
+  async function editarMembro(membro) {
+    await localStorage.setItem("current", JSON.stringify(membro));
+  }
 
   return (
     <Card {...rest}>
@@ -168,8 +179,12 @@ export const CustomerListResults = ({ customers, ...rest }) => {
                             fontWeight: 'bold',
                             marginRight: 10,
                             borderRadius: 5
-                          }}>
-                          <EditIcon style={{color: 'white', width: 18}} />
+                          }}
+                          onClick={() => editarMembro(customer)}  
+                        >
+                          <a href="http://localhost:3000/products">
+                            <EditIcon style={{color: 'white', width: 18}} />
+                          </a>
                       </div>
 
                       <div style={{
@@ -182,7 +197,9 @@ export const CustomerListResults = ({ customers, ...rest }) => {
                             fontWeight: 'bold',
                             marginRight: 10,
                             borderRadius: 5
-                          }}>
+                          }}
+                          onClick={() => deleteMembro(customer)}  
+                        >
                           <DeleteForeverIcon style={{color: 'white', width: 18}} />
                       </div>
 

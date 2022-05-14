@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Box, Container } from '@mui/material';
+import { Box, Container, Backdrop, CircularProgress } from '@mui/material';
 import { CustomerListResults } from '../components/customer/customer-list-results';
 import { CustomerListToolbar } from '../components/customer/customer-list-toolbar';
 import { DashboardLayout } from '../components/dashboard-layout';
@@ -15,7 +15,7 @@ const Customers = function () {
     const baseURL = "https://localhost:5001/v1/ListarMembros"
     await axios.get(baseURL).then((response) => {
         console.log(response.data)
-        setMembro(response.data)
+        setTimeout(() => setMembro(response.data), 500)
       });
   }
 
@@ -25,25 +25,36 @@ const Customers = function () {
 
   return (
     <>
-      <Head>
-        <title>
-          Customers
-        </title>
-      </Head>
-      <Box
-        component="main"
-        sx={{
-          flexGrow: 1,
-          py: 8
-        }}
-      >
-        <Container maxWidth={false}>
-          <CustomerListToolbar />
-          <Box sx={{ mt: 3 }}>
-            <CustomerListResults customers={membros} />
-          </Box>
-        </Container>
-      </Box>
+    {membros.length > 0 ? (
+      <>
+        <Head>
+          <title>
+            Customers
+          </title>
+        </Head>
+        <Box
+          component="main"
+          sx={{
+            flexGrow: 1,
+            py: 8
+          }}
+        >
+          <Container maxWidth={false}>
+            <CustomerListToolbar />
+            <Box sx={{ mt: 3 }}>
+              <CustomerListResults customers={membros} />
+            </Box>
+          </Container>
+        </Box>
+      </>
+    ) : (
+        <Backdrop
+        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={true}
+        >
+          <CircularProgress color="inherit" />
+        </Backdrop>
+      )}
     </>
   );
 } 

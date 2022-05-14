@@ -10,12 +10,11 @@ import { DashboardLayout } from '../components/dashboard-layout';
 import axios from "axios";
 
 const Products = function () {
-
     async function test() {
         const { name, email, sexo } = formValue;
         console.log(">>>>>> ", formValue)
     }
-
+    const [membro, setMembro] = useState(null)
     const [formValue, setFormValue] = useState({
         nome: "",
         email: "",
@@ -39,27 +38,6 @@ const Products = function () {
         dataBatismoAguas: "",
         status: true
       });
-
-    //   "cpf": "126.728.420-00",
-    //   "nome": "Kaio",
-    //   "cep": "49026-209",
-    //   "endereco": "Rua Y",
-    //   "numero": 20,
-    //   "complemento": "-",
-    //   "bairro": "Jardins",
-    //   "municipio": "Aracaju",
-    //   "estado": "SP",
-    //   "email": "kaio@email",
-    //   "fone": "3333-3333",
-    //   "sexo": "M",
-    //   "nascimento": "05/05/05",
-    //   "naturalidade": "Aracaju",
-    //   "estadoCivil": "Casado",
-    //   "profissao": "Músico",
-    //   "dataBatismoAguas": "02/01/2022",
-    //   "cargoIgreja": "Músico",
-    //   "igrejaID": 2,
-    //   "status": true
     
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -70,6 +48,15 @@ const Products = function () {
             };
         });
     };
+
+    async function getStorageInformations() {
+       let membro = await localStorage.getItem("current")
+       console.log(">>>>>>> membro", JSON.parse(membro))
+    }
+
+    useEffect(() => {
+        getStorageInformations()
+      }, []); 
     
     async function save() {
         const baseURL = "https://localhost:5001/v1/CadastrarMembro"
@@ -210,12 +197,12 @@ const Products = function () {
                           <TextField fullWidth id="outlined-basic" label="Endereço" variant="outlined" name="endereco" onChange={handleChange} style={{marginBottom: 25}}/>
       
                           <Grid item xs={12} style={{display: "flex", justifyContent: "space-between", marginBottom: 25}}>
-                              <TextField id="outlined-basic" label="Número" variant="outlined" name="numero" onChange={handleChange} style={{marginBottom: 25, width: "48%"}} />
-                              <TextField id="outlined-basic" label="Complemento" variant="outlined" name="complemento" onChange={handleChange} style={{marginBottom: 25, width: "48%"}} />
+                              <TextField id="outlined-basic" label="Número" variant="outlined" name="numero" onChange={handleChange} style={{width: "48%"}} />
+                              <TextField id="outlined-basic" label="Complemento" variant="outlined" name="complemento" onChange={handleChange} style={{width: "48%"}} />
                           </Grid>
                           <Grid item xs={12} style={{display: "flex", justifyContent: "space-between", marginBottom: 25}}>
-                              <TextField id="outlined-basic" label="Bairro" variant="outlined" name="bairro" onChange={handleChange} style={{marginBottom: 25, width: "48%"}} />
-                              <TextField id="outlined-basic" label="Município" variant="outlined" name="municipio" onChange={handleChange} style={{marginBottom: 25, width: "48%"}} />
+                              <TextField id="outlined-basic" label="Bairro" variant="outlined" name="bairro" onChange={handleChange} style={{width: "48%"}} />
+                              <TextField id="outlined-basic" label="Município" variant="outlined" name="municipio" onChange={handleChange} style={{width: "48%"}} />
                           </Grid>
                           <Grid item xs={12} style={{display: "flex", justifyContent: "space-between", marginBottom: 25}}>
                               <FormControl style={{width: "48%"}}>
