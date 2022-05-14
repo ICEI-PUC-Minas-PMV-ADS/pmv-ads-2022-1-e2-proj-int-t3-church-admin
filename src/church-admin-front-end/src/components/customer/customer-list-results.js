@@ -25,7 +25,7 @@ import axios from "axios";
 
 
 export const CustomerListResults = ({ customers, ...rest }) => {
-  console.log(">>>> ", customers)
+
   const [selectedCustomerIds, setSelectedCustomerIds] = useState([]);
   const [limit, setLimit] = useState(10);
   const [page, setPage] = useState(0);
@@ -34,7 +34,7 @@ export const CustomerListResults = ({ customers, ...rest }) => {
     let newSelectedCustomerIds;
 
     if (event.target.checked) {
-      newSelectedCustomerIds = customers.map((customer) => customer.id);
+      newSelectedCustomerIds = customers.map((customer) => customer.matricula);
     } else {
       newSelectedCustomerIds = [];
     }
@@ -42,12 +42,12 @@ export const CustomerListResults = ({ customers, ...rest }) => {
     setSelectedCustomerIds(newSelectedCustomerIds);
   };
 
-  const handleSelectOne = (event, id) => {
-    const selectedIndex = selectedCustomerIds.indexOf(id);
+  const handleSelectOne = (event, matricula) => {
+    const selectedIndex = selectedCustomerIds.indexOf(matricula);
     let newSelectedCustomerIds = [];
 
     if (selectedIndex === -1) {
-      newSelectedCustomerIds = newSelectedCustomerIds.concat(selectedCustomerIds, id);
+      newSelectedCustomerIds = newSelectedCustomerIds.concat(selectedCustomerIds, matricula);
     } else if (selectedIndex === 0) {
       newSelectedCustomerIds = newSelectedCustomerIds.concat(selectedCustomerIds.slice(1));
     } else if (selectedIndex === selectedCustomerIds.length - 1) {
@@ -77,6 +77,10 @@ export const CustomerListResults = ({ customers, ...rest }) => {
 
   async function editarMembro(membro) {
     await localStorage.setItem("current", JSON.stringify(membro));
+  }
+
+  async function verMembro(membro) {
+    await localStorage.setItem("selected", JSON.stringify(membro));
   }
 
   return (
@@ -169,6 +173,30 @@ export const CustomerListResults = ({ customers, ...rest }) => {
                   </TableCell>
                   <TableCell>
                     <div style={{display: 'flex'}}>
+                    <div style={{
+                            height: 26,
+                            width: 26,
+                            backgroundColor: '#62D883',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            fontWeight: 'bold',
+                            borderRadius: 5,
+                            marginRight: 10,
+                          }}
+                          onClick={() => verMembro(customer)} 
+                          >
+                            <a
+                              style={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                              }}
+                            href="http://localhost:3000/settings">
+                              <RemoveRedEyeIcon style={{color: 'white', width: 18}}/>
+                            </a>
+                      </div>
+
                       <div style={{
                             height: 26,
                             width: 26,
@@ -182,7 +210,13 @@ export const CustomerListResults = ({ customers, ...rest }) => {
                           }}
                           onClick={() => editarMembro(customer)}  
                         >
-                          <a href="http://localhost:3000/products">
+                          <a 
+                             style={{
+                              display: 'flex',
+                              justifyContent: 'center',
+                              alignItems: 'center',
+                              }}
+                            href="http://localhost:3000/products">
                             <EditIcon style={{color: 'white', width: 18}} />
                           </a>
                       </div>
@@ -195,7 +229,6 @@ export const CustomerListResults = ({ customers, ...rest }) => {
                             justifyContent: 'center',
                             alignItems: 'center',
                             fontWeight: 'bold',
-                            marginRight: 10,
                             borderRadius: 5
                           }}
                           onClick={() => deleteMembro(customer)}  
@@ -203,18 +236,6 @@ export const CustomerListResults = ({ customers, ...rest }) => {
                           <DeleteForeverIcon style={{color: 'white', width: 18}} />
                       </div>
 
-                      <div style={{
-                            height: 26,
-                            width: 26,
-                            backgroundColor: '#62D883',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            fontWeight: 'bold',
-                            borderRadius: 5
-                          }}>
-                          <RemoveRedEyeIcon style={{color: 'white', width: 18}}/>
-                      </div>
                     </div>
                   </TableCell>
                 </TableRow>
