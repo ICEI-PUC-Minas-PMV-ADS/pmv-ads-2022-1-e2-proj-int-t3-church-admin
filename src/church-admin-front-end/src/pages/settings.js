@@ -171,11 +171,11 @@ useEffect(() => {
                       <TextField 
                         fullWidth
                         id="outlined-basic"
-                        label="Data de Batismo"
+                        label="Status de batismo"
                         variant="outlined" 
                         style={{marginBottom: 25}}
                         name="batismo"
-                        value={userData.dataBatismoAguas || ""}
+                        value={userData.dataBatismoAguas ? "Batizado" : "Não Batizado"}
                       />
                       <TextField 
                         fullWidth

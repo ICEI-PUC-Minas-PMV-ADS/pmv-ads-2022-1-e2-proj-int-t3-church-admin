@@ -209,7 +209,7 @@ const Products = function () {
                                   <Select
                                       labelId="demo-simple-select-autowidth-label"
                                       id="demo-simple-select-autowidth"
-                                      value={formValue.dataBatismoAguas ? "sim" : "nao"}
+                                      value={updateMode ? formValue.dataBatismoAguas ? "sim" : "nao" : formValue.batismo}
                                       input={<OutlinedInput label="Status de Batismo" />}
                                       label="Age"
                                       onChange={handleChange}
