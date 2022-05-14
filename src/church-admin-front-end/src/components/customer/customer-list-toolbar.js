@@ -35,12 +35,14 @@ export const CustomerListToolbar = (props) => (
         >
           Export
         </Button>
-        <Button
-          color="primary"
-          variant="contained"
-        >
-          Adicionar
-        </Button>
+        <a href="http://localhost:3000/products">
+          <Button
+            color="primary"
+            variant="contained"
+          >
+            Adicionar
+          </Button>
+        </a>
       </Box>
     </Box>
     <Box sx={{ mt: 3 }}>
@@ -61,7 +63,7 @@ export const CustomerListToolbar = (props) => (
                   </InputAdornment>
                 )
               }}
-              placeholder="Search customer"
+              placeholder="Buscar membro"
               variant="outlined"
             />
           </Box>
