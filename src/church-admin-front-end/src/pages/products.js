@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useEffect, useState} from 'react';
 import Head from 'next/head';
-import { Box, Container, OutlinedInput, Grid, TextField, Item, FormControl, RadioGroup, FormLabel, FormControlLabel, Radio, InputLabel, Select, MenuItem, Button} from '@mui/material';
+import { Box, Container, OutlinedInput, Grid, TextField, Item, FormControl, RadioGroup, FormLabel, FormControlLabel, Radio, InputLabel, Select, MenuItem, Button, Backdrop, CircularProgress} from '@mui/material';
 import { products } from '../__mocks__/products';
 import { ProductListToolbar } from '../components/product/product-list-toolbar';
 import { ProductCard } from '../components/product/product-card';
@@ -10,12 +10,10 @@ import { DashboardLayout } from '../components/dashboard-layout';
 import axios from "axios";
 
 const Products = function () {
-    async function test() {
-        const { name, email, sexo } = formValue;
-        console.log(">>>>>> ", formValue)
-    }
+
     const [membro, setMembro] = useState(null)
-    const [loading, setLoading] = useState("false")
+    const [loading, setLoading] = useState(true)
+    const [updateMode, setUpdateMode] = useState(false)
     const [formValue, setFormValue] = useState({
         nome: "",
         email: "",
@@ -51,10 +49,10 @@ const Products = function () {
     };
 
     async function getStorageInformations() {
-        setLoading(true);
        let membro = JSON.parse(await localStorage.getItem("current"))
        if(membro) {
         setFormValue({
+            matricula: membro.matricula,
             nome: membro.nome,
             email: membro.email,
             fone: membro.fone,
@@ -76,9 +74,10 @@ const Products = function () {
             cargoIgreja: membro.cargoIgreja,
             dataBatismoAguas: membro.dataBatismoAguas,
         })
+        setUpdateMode(true)
         localStorage.removeItem("current");
        }
-        setLoading(false);
+       setTimeout(() => setLoading(false), 500)
     }
 
     useEffect(() => {
@@ -86,7 +85,9 @@ const Products = function () {
       }, []); 
     
     async function save() {
+        setLoading(true)
         const baseURL = "https://localhost:5001/v1/CadastrarMembro"
+        const baseURL_UPDATE = "https://localhost:5001/v1/AtualizarMembro"
         const headers =  {
             "access-control-allow-credentials": true, 
             "access-control-allow-headers": "*" ,
@@ -95,14 +96,31 @@ const Products = function () {
             "access-control-expose-headers": "*" ,
             "content-type": "application/problem+json"   
         };
-        console.log(formValue)
-        await axios.post(baseURL, formValue, {headers})
-        .then((response) => {console.log(response.data)});
+
+        if(updateMode) {
+            await axios.put(baseURL_UPDATE, formValue, {headers})
+            .then(response => {console.log(response.data)});
+            document.location.reload(true)
+        } else {
+            await axios.post(baseURL, formValue, {headers})
+            .then((response) => {console.log(response.data)});
+            setTimeout(() => setLoading(false), 500)
+            document.location.reload(true)
+        }
     }
 
     return (
         <>
-          <Head>
+            {loading ? (
+                <Backdrop
+                sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                open={true}
+                >
+                  <CircularProgress color="inherit" />
+              </Backdrop>
+            ) : (
+            <>
+                 <Head>
             <title>
               Products | Material Kit
             </title>
@@ -115,7 +133,7 @@ const Products = function () {
             }}
           >
               <Container maxWidth={false}>
-                  <h1 onClick={test} style={{marginBottom: 30}}>Cadastrar</h1>
+                  <h1 onClick={() =>  console.log(">>>>> updateMode: ", updateMode)} style={{marginBottom: 30}}>Cadastrar</h1>
       
                   <Grid container spacing={2} >
                       <Grid item xs={6} style={{borderTopColor: "#000000", borderTopStyle: "solid", borderTopWidth: 5}}>
@@ -275,7 +293,7 @@ const Products = function () {
                              <h2 style={{marginTop: 25, marginBottom: 25}}>Dados Eclesiásticos</h2>
                              <TextField fullWidth id="outlined-basic" label="Cargo Ministerial" variant="outlined" name="cargoIgreja" onChange={handleChange} style={{marginBottom: 25}} value={formValue.cargoIgreja}/>
                              <TextField fullWidth id="outlined-basic" label="Data de Batismo" variant="outlined" name="dataBatismoAguas" onChange={handleChange} value={formValue.dataBatismoAguas}/>
-                             <Grid xs={12} style={{display: "flex", justifyContent: "flex-end", alignItems: "center", flexDirection: "row", marginTop: 20}}>
+                             <Grid item xs={12} style={{display: "flex", justifyContent: "flex-end", alignItems: "center", flexDirection: "row", marginTop: 20}}>
                                 <Button onClick={save} variant="contained">Salvar</Button>
                              </Grid>
                           </Grid>
@@ -283,6 +301,8 @@ const Products = function () {
                   </Grid>
               </Container>
           </Box>
+                </>
+            )}
         </>
       );
 }

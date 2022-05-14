@@ -10,13 +10,15 @@ import axios from "axios";
 const Customers = function () {
 
   const [membros, setMembro] = useState([])
+  const [loading, setLoading] = useState(true)
 
   async function getMembros() {
     const baseURL = "https://localhost:5001/v1/ListarMembros"
     await axios.get(baseURL).then((response) => {
         console.log(response.data)
-        setTimeout(() => setMembro(response.data), 500)
+        setTimeout(() => setMembro(response.data), 300)
       });
+    setLoading(false)
   }
 
   useEffect(() => {
@@ -25,7 +27,7 @@ const Customers = function () {
 
   return (
     <>
-    {membros.length > 0 ? (
+    {!loading ? (
       <>
         <Head>
           <title>
