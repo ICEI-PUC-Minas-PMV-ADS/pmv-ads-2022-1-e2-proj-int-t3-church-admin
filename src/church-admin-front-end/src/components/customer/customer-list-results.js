@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import PropTypes from 'prop-types';
 import { format } from 'date-fns';
@@ -21,9 +21,11 @@ import { getInitials } from '../../utils/get-initials';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import axios from "axios";
+
 
 export const CustomerListResults = ({ customers, ...rest }) => {
-  console.log(">>>> ", customers)
+
   const [selectedCustomerIds, setSelectedCustomerIds] = useState([]);
   const [limit, setLimit] = useState(10);
   const [page, setPage] = useState(0);
@@ -32,7 +34,7 @@ export const CustomerListResults = ({ customers, ...rest }) => {
     let newSelectedCustomerIds;
 
     if (event.target.checked) {
-      newSelectedCustomerIds = customers.map((customer) => customer.id);
+      newSelectedCustomerIds = customers.map((customer) => customer.matricula);
     } else {
       newSelectedCustomerIds = [];
     }
@@ -40,12 +42,12 @@ export const CustomerListResults = ({ customers, ...rest }) => {
     setSelectedCustomerIds(newSelectedCustomerIds);
   };
 
-  const handleSelectOne = (event, id) => {
-    const selectedIndex = selectedCustomerIds.indexOf(id);
+  const handleSelectOne = (event, matricula) => {
+    const selectedIndex = selectedCustomerIds.indexOf(matricula);
     let newSelectedCustomerIds = [];
 
     if (selectedIndex === -1) {
-      newSelectedCustomerIds = newSelectedCustomerIds.concat(selectedCustomerIds, id);
+      newSelectedCustomerIds = newSelectedCustomerIds.concat(selectedCustomerIds, matricula);
     } else if (selectedIndex === 0) {
       newSelectedCustomerIds = newSelectedCustomerIds.concat(selectedCustomerIds.slice(1));
     } else if (selectedIndex === selectedCustomerIds.length - 1) {
@@ -67,6 +69,19 @@ export const CustomerListResults = ({ customers, ...rest }) => {
   const handlePageChange = (event, newPage) => {
     setPage(newPage);
   };
+
+  async function deleteMembro(membro) {
+    const baseURL = "https://localhost:5001/v1/DeletarMembro"
+    axios.delete(baseURL, { data: membro }).then(() => document.location.reload(true));
+  }
+
+  async function editarMembro(membro) {
+    await localStorage.setItem("current", JSON.stringify(membro));
+  }
+
+  async function verMembro(membro) {
+    await localStorage.setItem("selected", JSON.stringify(membro));
+  }
 
   return (
     <Card {...rest}>
@@ -158,6 +173,30 @@ export const CustomerListResults = ({ customers, ...rest }) => {
                   </TableCell>
                   <TableCell>
                     <div style={{display: 'flex'}}>
+                    <div style={{
+                            height: 26,
+                            width: 26,
+                            backgroundColor: '#62D883',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            fontWeight: 'bold',
+                            borderRadius: 5,
+                            marginRight: 10,
+                          }}
+                          onClick={() => verMembro(customer)} 
+                          >
+                            <a
+                              style={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                              }}
+                            href="http://localhost:3000/settings">
+                              <RemoveRedEyeIcon style={{color: 'white', width: 18}}/>
+                            </a>
+                      </div>
+
                       <div style={{
                             height: 26,
                             width: 26,
@@ -168,8 +207,18 @@ export const CustomerListResults = ({ customers, ...rest }) => {
                             fontWeight: 'bold',
                             marginRight: 10,
                             borderRadius: 5
-                          }}>
-                          <EditIcon style={{color: 'white', width: 18}} />
+                          }}
+                          onClick={() => editarMembro(customer)}  
+                        >
+                          <a 
+                             style={{
+                              display: 'flex',
+                              justifyContent: 'center',
+                              alignItems: 'center',
+                              }}
+                            href="http://localhost:3000/products">
+                            <EditIcon style={{color: 'white', width: 18}} />
+                          </a>
                       </div>
 
                       <div style={{
@@ -180,24 +229,13 @@ export const CustomerListResults = ({ customers, ...rest }) => {
                             justifyContent: 'center',
                             alignItems: 'center',
                             fontWeight: 'bold',
-                            marginRight: 10,
                             borderRadius: 5
-                          }}>
+                          }}
+                          onClick={() => deleteMembro(customer)}  
+                        >
                           <DeleteForeverIcon style={{color: 'white', width: 18}} />
                       </div>
 
-                      <div style={{
-                            height: 26,
-                            width: 26,
-                            backgroundColor: '#62D883',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            fontWeight: 'bold',
-                            borderRadius: 5
-                          }}>
-                          <RemoveRedEyeIcon style={{color: 'white', width: 18}}/>
-                      </div>
                     </div>
                   </TableCell>
                 </TableRow>
