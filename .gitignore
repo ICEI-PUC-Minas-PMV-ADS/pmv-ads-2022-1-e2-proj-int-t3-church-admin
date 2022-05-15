@@ -1,1 +1,4 @@
 node_modules
+.next/*
+src/church-admin-front-end/.next
+/src/church-admin-front-end/.next
