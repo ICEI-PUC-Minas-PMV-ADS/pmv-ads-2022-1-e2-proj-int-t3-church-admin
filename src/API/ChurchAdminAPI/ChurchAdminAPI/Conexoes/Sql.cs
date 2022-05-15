@@ -173,11 +173,11 @@ namespace ChurchAdminAPI.Conexoes
                 _conexao.Open();
 
                 string sql = @"DELETE FROM Membro 
-                               WHERE  Cpf = @Cpf";
+                               WHERE  Matricula = @Matricula";
 
                 using (var cmd = new SqlCommand(sql, _conexao))
                 {
-                    cmd.Parameters.AddWithValue("@Cpf", membro.Cpf);
+                    cmd.Parameters.AddWithValue("@Matricula", membro.Matricula);
                     cmd.ExecuteNonQuery();
                     
                 }
