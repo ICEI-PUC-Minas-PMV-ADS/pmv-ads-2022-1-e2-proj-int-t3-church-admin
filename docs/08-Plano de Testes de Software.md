@@ -1,12 +1,11 @@
 # Plano de Testes de Software
 
-Os requisitos para realização dos teste de software são: 
+> **Os requisitos para realização dos teste de software são:** 
+>
+> - O software precisa estar com o front-end  funcional
+> - O software precisa que o back-end esteja recebendo os inputs do front-end 
+> - O software precisa que o back-end esteja armazendo os dados inputados em um banco de dados
 
-| Descrição  | 
-|----------------------------------------------------------------------|
-| O software precisa estar com o front-end  funcional |
-| O software precisa que o back-end esteja recebendo os inputs do front-end  | 
-| O software precisa que o back-end esteja armazendo os dados inputados em um banco de dados|
 
 Os testes funcionais a serem realizados na aplicação são descritos a seguir:
 
@@ -34,11 +33,11 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir:
 | **Objetivo do teste**  |  Verificar na página de informações detalhadas, se todos os dados inseridos na tela de cadastro, estão devidamente preenchidos na tela de detalhes|
 |  **Critérios de Êxito** |O membro deve aparecer na tela com os dados preenchidos |
 
-|  Caso de teste | CT-05- Funcionalidade do botão de editar  |
+|  Caso de teste | CT-05- Funcionalidade de atualizar cadastro  |
 | :------------ | :------------ |
 | **Requisito Associado**  |  RF-003 O sistema deve ser capaz de atualizar os dados dos membros da igreja |
-| **Objetivo do teste**  | Verificar na página de consultar, se o botão de editar, leva a página de edição |
-|  **Critérios de Êxito** |O botão deve garantir a vizualização da página para editar os dados|
+| **Objetivo do teste**  | Verificar na página de consultar, se ao clicar em editar e salvar novas informações do membro, o cadastro é atualizado |
+|  **Critérios de Êxito** |O cadastro do membro deve aparecer atualizado.|
 
 |  Caso de teste | CT-06- Funcionalidade do botão de deletar cadastros |
 | :------------ | :------------ |
