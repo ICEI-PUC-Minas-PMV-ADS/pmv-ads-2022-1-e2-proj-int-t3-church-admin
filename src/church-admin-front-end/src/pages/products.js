@@ -6,8 +6,6 @@ import { DashboardLayout } from '../components/dashboard-layout';
 import axios from "axios";
 
 const Products = function () {
-
-    const [text, setText] = useState();
     const [loading, setLoading] = useState(true)
     const [updateMode, setUpdateMode] = useState(false)
     const [formValue, setFormValue] = useState({
