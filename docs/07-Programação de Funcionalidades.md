@@ -1,5 +1,15 @@
 # Programação de Funcionalidades
 
+## Front-End - React.js e Material UI
+O template que utilizamos é baseado em React.js junto com a lib do Material UI. </br>
+
+<img width="399" alt="materialUI" src="https://user-images.githubusercontent.com/87099736/168502814-20c22e9b-88a8-4484-a08c-a917dede736b.png"> </br>
+<img width="407" alt="react" src="https://user-images.githubusercontent.com/87099736/168502854-f788aa75-fd5c-4d55-8a5c-4e75fb581442.png">
+
+## Métodos de Requisição - Axios
+Para os métodos de requisição, escolhemos a lib Axios. </br>
+<img width="334" alt="axios" src="https://user-images.githubusercontent.com/87099736/168503075-c32ba573-9eaf-4cf8-9a42-2907fb26fd28.png">
+
 ## Banco de dados - SQL Server
 Banco construído manualmente através de queries de criação de database e tabelas. </br>
 - DB: DB_ChurchAdmin  </br>
