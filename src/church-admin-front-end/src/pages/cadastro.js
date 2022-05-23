@@ -5,7 +5,7 @@ import { Box, Container, OutlinedInput, Grid, TextField, FormControl, RadioGroup
 import { DashboardLayout } from '../components/dashboard-layout';
 import axios from "axios";
 
-const Products = function () {
+const Cadastro = function () {
     const [loading, setLoading] = useState(true)
     const [updateMode, setUpdateMode] = useState(false)
     const [formValue, setFormValue] = useState({
@@ -126,7 +126,7 @@ const Products = function () {
                 <>
                     <Head>
                         <title>
-                            Products | Material Kit
+                            Cadastro | Church Admin
                         </title>
                     </Head>
                     <Box
@@ -327,10 +327,10 @@ const Products = function () {
     );
 }
 
-Products.getLayout = (page) => (
+Cadastro.getLayout = (page) => (
     <DashboardLayout>
         {page}
     </DashboardLayout>
 );
 
-export default Products;
+export default Cadastro;

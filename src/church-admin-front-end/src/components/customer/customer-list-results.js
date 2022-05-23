@@ -216,7 +216,7 @@ export const CustomerListResults = ({ customers, ...rest }) => {
                               justifyContent: 'center',
                               alignItems: 'center',
                               }}
-                            href="http://localhost:3000/products">
+                            href="http://localhost:3000/cadastro">
                             <EditIcon style={{color: 'white', width: 18}} />
                           </a>
                       </div>
