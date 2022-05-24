@@ -1,12 +1,43 @@
 # Registro de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
+## CT-01- Cadastramento de membros
 
-Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
+Conforme o CT-01, o teste foi executado com sucesso. Todas os campos preecnhidos e enviados, são armazenados e dado como salvo com sucesso.
+
+![Tela de cadastro](img/Cadastrar_Membro.png)
+
+## CT-02- Consulta de membros
+
+Conforme o CT-02, o teste foi executado com sucesso. Ao digitar a matricula ou CPF do membro cadastrado, o resultado é exibido.
+
+![Consultar membros](img/Consultar_Membros.png)
+
+## CT-03- Funcionalidade do botão de visualizar
+
+Conforme o CT-03, o teste foi executado com sucesso. O botão de vizualizar foi incluído e ao clicar, a página de informções detalhadas é exibida. 
+
+![Botao vizualizar](img/Botao_de_visualizar.png)
+
+## CT-04- Informações detalhadas
+
+Conforme o CT-04, o teste foi executado com sucesso. É possível através da página de listar cadastros, clicar no botão de vizualizar e exibir todas as informações de cadastro do membro preenchidas. 
+
+![Informacoes Detalhadas](img/Informacoes_detalhadas.png)
+
+## CT-05- Funcionalidade de atualizar cadastro
+
+Conforme o CT-05, o teste foi executado com sucesso. Ao alterar algum campo na área de cadastro e clicar em salvar, a mensagem de atualizado com sucesso é exibida, e as informações atualizadas. 
+
+![Editar membro](img/Atualizar_membro.png)
+
+
+## CT-06- Funcionalidade do botão de deletar cadastros
+
+Conforme o CT-06, o teste foi executado com sucesso. O botão de deletar foi incluído e ao clicar, a memsagem de usuario deletado é exibida. 
+
+![Deletar membro](img/Deletar_membro.png)
+
 
 ## Avaliação
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
-
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
+Todos os testes foram executados com sucesso conforme o plano de teste proposto. Tanto o front-end, quando o back-end tiveram uma boa integração para que os resultados fossem alcançados. Para proxima etapa, serão incluídas novas funcionalidades e atualizado os planos de testes conforme a implementação. 
