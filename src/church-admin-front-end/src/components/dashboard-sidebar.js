@@ -30,6 +30,11 @@ const items = [
     title: 'Cadastrar'
   },
   {
+    href: '/cadastro-igreja',
+    icon: (<UserAdd fontSize="small" />),
+    title: 'Cadastrar Igreja'
+  },
+  {
     href: '/listagem',
     icon: (<UsersIcon fontSize="small" />),
     title: 'Listar'
