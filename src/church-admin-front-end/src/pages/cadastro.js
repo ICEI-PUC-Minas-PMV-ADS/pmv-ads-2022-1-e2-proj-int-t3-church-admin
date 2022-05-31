@@ -238,7 +238,7 @@ const Cadastro = function () {
                                             <Select
                                                 labelId="demo-simple-select-autowidth-label"
                                                 id="demo-simple-select-autowidth"
-                                                value={updateMode ? formValue.dataBatismoAguas ? "sim" : "nao" : formValue.batismo}
+                                                value={formValue.batismo}
                                                 input={<OutlinedInput label="Status de Batismo" />}
                                                 label="batismo"
                                                 onChange={handleChange}
@@ -320,7 +320,7 @@ const Cadastro = function () {
 
                                     <TextField fullWidth id="outlined-basic" label="Endereço" variant="outlined" name="endereco" onChange={handleChange} style={{ marginBottom: 25 }} value={formValue.endereco} error={formValue.endereco === ""} helperText={formValue.endereco === "" ? "Por favor, preencha este campo." : " "} />
 
-                                    <Grid item xs={12} style={{ display: "flex", justifyContent: "space-between", marginBottom: 25 }}>                                        
+                                    <Grid item xs={12} style={{ display: "flex", justifyContent: "space-between", marginBottom: 25 }}>
                                         <InputMask
                                             mask="9999999999"
                                             value={formValue.numero}
@@ -394,8 +394,36 @@ const Cadastro = function () {
                                     </Grid>
                                     <Grid item xs={12} style={{ borderTopColor: "#000000", borderTopStyle: "solid", borderTopWidth: 5 }}>
                                         <h2 style={{ marginTop: 25, marginBottom: 25 }}>Dados Eclesiásticos</h2>
-                                        <TextField fullWidth id="outlined-basic" label="Cargo Ministerial" variant="outlined" name="cargoIgreja" onChange={handleChange} style={{ marginBottom: 25 }} value={formValue.cargoIgreja} error={formValue.cargoIgreja === ""} helperText={formValue.cargoIgreja === "" ? "Por favor, preencha este campo." : " "} />
-                                        <TextField fullWidth id="outlined-basic" label="Data de Batismo" variant="outlined" name="dataBatismoAguas" onChange={handleChange} value={formValue.dataBatismoAguas} error={formValue.dataBatismoAguas === ""} helperText={formValue.dataBatismoAguas === "" ? "Por favor, preencha este campo." : " "} />
+                                        <TextField
+                                            fullWidth
+                                            id="outlined-basic"
+                                            label="Cargo Ministerial"
+                                            variant="outlined"
+                                            name="cargoIgreja"
+                                            onChange={handleChange}
+                                            style={{ marginBottom: 25 }}
+                                            value={formValue.cargoIgreja}
+                                            error={formValue.cargoIgreja === ""}
+                                            helperText={formValue.cargoIgreja === "" ? "Por favor, preencha este campo." : " "}
+                                        />
+                                        {formValue.batismo === 'nao' ?
+                                            null
+                                            :
+                                            <TextField
+                                                fullWidth
+                                                type="date"
+                                                InputLabelProps={{ shrink: true }}
+                                                id="outlined-basic"
+                                                label="Data de Batismo"
+                                                variant="outlined"
+                                                name="dataBatismoAguas"
+                                                onChange={handleChange}
+                                                value={formValue.dataBatismoAguas}
+                                                error={formValue.dataBatismoAguas === ""}
+                                                helperText={formValue.dataBatismoAguas === "" ? "Por favor, preencha este campo." : " "}
+                                            />
+                                        }
+
                                         <Grid item xs={12} style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", flexDirection: "row", marginTop: 20 }}>
                                             <Button onClick={save} variant="contained"> Cadastrar </Button>
                                         </Grid>
