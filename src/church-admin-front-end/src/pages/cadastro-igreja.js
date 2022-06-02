@@ -137,15 +137,15 @@ const Cadastro = function () {
                         }}
                     >
                         <Container maxWidth={false}>
-                            <h1 onClick={() => console.log(">>>>> updateMode: ", updateMode)} style={{ marginBottom: 30 }}>Cadastrar</h1>
+                            <h1 onClick={() => console.log(">>>>> updateMode: ", updateMode)} style={{ marginBottom: 30 }}>Cadastro de Igreja</h1>
 
                             <Grid container spacing={2} >
                                 <Grid item xs={6} style={{ borderTopColor: "#000000", borderTopStyle: "solid", borderTopWidth: 5 }}>
-                                    <h2 style={{ marginBottom: 25 }}>Informações Pessoais</h2>
+                                    <h2 style={{ marginBottom: 25 }}>Dados da instituição</h2>
                                     <TextField
                                         fullWidth
                                         id="outlined-required"
-                                        label="Nome Completo"
+                                        label="Nome da igreja"
                                         variant="outlined"
                                         style={{ marginBottom: 25 }}
                                         name="nome"
@@ -153,6 +153,30 @@ const Cadastro = function () {
                                         onChange={handleChange}
                                         error={formValue.nome === ""}
                                         helperText={formValue.nome === "" ? "Por favor, preencha este campo." : " "}
+                                    />
+                                    <TextField
+                                        fullWidth
+                                        id="outlined-required"
+                                        label="Razão Social"
+                                        variant="outlined"
+                                        style={{ marginBottom: 25 }}
+                                        name="nome"
+                                        value={formValue.nome}
+                                        onChange={handleChange}
+                                        error={formValue.nome === ""}
+                                        helperText={formValue.nome === "" ? "Por favor, preencha este campo." : " "}
+                                    />
+                                    <TextField
+                                        fullWidth
+                                        id="outlined-basic"
+                                        label="CNPJ"
+                                        variant="outlined"
+                                        style={{ marginBottom: 25 }}
+                                        name="cnpj"
+                                        value={formValue.cnpj}
+                                        onChange={handleChange}
+                                        error={formValue.cnpj === ""}
+                                        helperText={formValue.cnpj === "" ? "Por favor, preencha este campo." : " "}
                                     />
                                     <TextField
                                         fullWidth
@@ -169,7 +193,7 @@ const Cadastro = function () {
                                     <TextField
                                         fullWidth
                                         id="outlined-basic"
-                                        label="Telefone"
+                                        label="Telefone 1"
                                         variant="outlined"
                                         style={{ marginBottom: 25 }}
                                         name="fone"
@@ -181,84 +205,40 @@ const Cadastro = function () {
                                     <TextField
                                         fullWidth
                                         id="outlined-basic"
-                                        label="Data de Nascimento"
+                                        label="Telefone 2"
                                         variant="outlined"
                                         style={{ marginBottom: 25 }}
-                                        name="nascimento"
-                                        value={formValue.nascimento}
+                                        name="fone"
+                                        value={formValue.fone}
                                         onChange={handleChange}
-                                        error={formValue.nascimento === ""}
-                                        helperText={formValue.nascimento === "" ? "Por favor, preencha este campo." : " "}
+                                        error={formValue.fone === ""}
+                                        helperText={formValue.fone === "" ? "Por favor, preencha este campo." : " "}
                                     />
                                     <TextField
                                         fullWidth
                                         id="outlined-basic"
-                                        label="Profissão"
+                                        label="Data do Cadastro"
                                         variant="outlined"
                                         style={{ marginBottom: 25 }}
-                                        name="profissao"
-                                        value={formValue.profissao}
+                                        name="cadastro"
+                                        value={formValue.cadastro}
                                         onChange={handleChange}
-                                        error={formValue.profissao === ""}
-                                        helperText={formValue.profissao === "" ? "Por favor, preencha este campo." : " "}
+                                        error={formValue.cadastro === ""}
+                                        helperText={formValue.cadastro === "" ? "Por favor, preencha este campo." : " "}
                                     />
-
-                                    <Grid item xs={12} style={{ display: "flex", justifyContent: "space-between", marginBottom: 25 }}>
-                                        <FormControl>
-                                            <FormLabel id="demo-radio-buttons-group-label">Sexo</FormLabel>
-                                            <RadioGroup
-                                                aria-labelledby="demo-radio-buttons-group-label"
-                                                defaultValue="female"
-                                                name="radio-buttons-group"
-                                                row
-                                                value={formValue.sexo}
-                                                error={formValue.sexo === ""}
-                                            >
-                                                <FormControlLabel value="F" control={<Radio />} label="Feminino" onChange={handleChange} name="sexo" />
-                                                <FormControlLabel value="M" control={<Radio />} label="Masculino" onChange={handleChange} name="sexo" />
-                                            </RadioGroup>
-                                        </FormControl>
-
-                                        <FormControl style={{ width: '55%' }}>
-                                            <InputLabel id="demo-simple-select-autowidth-label">Status de Batismo</InputLabel>
-                                            <Select
-                                                labelId="demo-simple-select-autowidth-label"
-                                                id="demo-simple-select-autowidth"
-                                                value={updateMode ? formValue.dataBatismoAguas ? "sim" : "nao" : formValue.batismo}
-                                                input={<OutlinedInput label="Status de Batismo" />}
-                                                label="batismo"
-                                                onChange={handleChange}
-                                                name="batismo"
-                                                error={formValue.batismo === ""}
-                                                helperText={formValue.batismo === "" ? "Por favor, preencha este campo." : " "}
-                                            >
-                                                <MenuItem value={"sim"}>Batizado</MenuItem>
-                                                <MenuItem value={"nao"}>Não batizado</MenuItem>
-                                            </Select>
-                                        </FormControl>
-                                    </Grid>
-
-                                    <FormControl fullWidth style={{ marginBottom: 25 }}>
-                                        <InputLabel id="demo-simple-select-label">Estado Civil</InputLabel>
-                                        <Select
-                                            labelId="demo-simple-select-label"
-                                            id="demo-simple-select"
-                                            value={formValue.estadoCivil}
-                                            input={<OutlinedInput label="Estado Civil" />}
-                                            label="Estado Civil"
-                                            name="estadoCivil"
-                                            onChange={handleChange}
-                                            error={formValue.estadoCivil === ""}
-                                        >
-                                            <MenuItem value={"solteiro"}>Solteiro</MenuItem>
-                                            <MenuItem value={"casado"}>Casado</MenuItem>
-                                            <MenuItem value={"divorciado"}>Divorciado</MenuItem>
-                                            <MenuItem value={"viuvo"}>Viúvo</MenuItem>
-                                        </Select>
-                                    </FormControl>
-
-                                    <TextField fullWidth id="outlined-basic" label="CPF" variant="outlined" name="cpf" onChange={handleChange} style={{ marginBottom: 25 }} value={formValue.cpf} error={formValue.cpf === ""} helperText={formValue.cpf === "" ? "Por favor, preencha este campo." : " "} />
-                                    <TextField fullWidth id="outlined-basic" label="Naturalidade" variant="outlined" name="naturalidade" onChange={handleChange} value={formValue.naturalidade} error={formValue.naturalidade === ""} helperText={formValue.naturalidade === "" ? "Por favor, preencha este campo." : " "} />
+                                    <TextField
+                                        fullWidth
+                                        id="outlined-basic"
+                                        label="Data da Fundação"
+                                        variant="outlined"
+                                        style={{ marginBottom: 25 }}
+                                        name="fundacao"
+                                        value={formValue.fundacao}
+                                        onChange={handleChange}
+                                        error={formValue.fundacao === ""}
+                                        helperText={formValue.fundacao === "" ? "Por favor, preencha este campo." : " "}
+                                    />
+  
                                 </Grid>
                                 <Grid item xs={6} style={{ borderTopColor: "#000000", borderTopStyle: "solid", borderTopWidth: 5 }}>
                                     <h2 style={{ marginBottom: 25 }}>Localização</h2>
@@ -293,7 +273,7 @@ const Cadastro = function () {
                                         </FormControl>
 
                                         <FormControl style={{ width: "48%" }}>
-                                            <InputLabel id="demo-simple-select-label">Congregação</InputLabel>
+                                            <InputLabel id="demo-simple-select-label">Categoria</ InputLabel>
                                             <Select
                                                 labelId="demo-simple-select-label"
                                                 id="demo-simple-select"
@@ -310,9 +290,7 @@ const Cadastro = function () {
                                         </FormControl>
                                     </Grid>
                                     <Grid item xs={12} style={{ borderTopColor: "#000000", borderTopStyle: "solid", borderTopWidth: 5 }}>
-                                        <h2 style={{ marginTop: 25, marginBottom: 25 }}>Dados Eclesiásticos</h2>
-                                        <TextField fullWidth id="outlined-basic" label="Cargo Ministerial" variant="outlined" name="cargoIgreja" onChange={handleChange} style={{ marginBottom: 25 }} value={formValue.cargoIgreja} error={formValue.cargoIgreja === ""} helperText={formValue.cargoIgreja === "" ? "Por favor, preencha este campo." : " "} />
-                                        <TextField fullWidth id="outlined-basic" label="Data de Batismo" variant="outlined" name="dataBatismoAguas" onChange={handleChange} value={formValue.dataBatismoAguas} error={formValue.dataBatismoAguas === ""} helperText={formValue.dataBatismoAguas === "" ? "Por favor, preencha este campo." : " "} />
+                                        
                                         <Grid item xs={12} style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", flexDirection: "row", marginTop: 20 }}>
                                            <Button onClick={save} variant="contained"> Cadastrar </Button>
                                         </Grid>
