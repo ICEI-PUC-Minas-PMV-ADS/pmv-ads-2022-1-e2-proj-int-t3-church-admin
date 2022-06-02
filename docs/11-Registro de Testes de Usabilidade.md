@@ -73,6 +73,33 @@ Nota 5- Excelente (pronto para testar em produção)
 |Visualizar membro                      |                      |                     |                         |                       |
 
 
+Durante o teste de usabilidade, também será abordado o uso da **Avalição Heurística**, essa é uma técnica de inspeção que ajuda a identificar problemas de usabilidade em uma interface e que vai complementar o teste dando uma resposta mais precisa de como foi e o que se pode melhorar a experiência do usuário.
+Durante o teste será usado as 10 Heurísticas de Nielsen que são:
+
+1- Visibilidade do status do sistema.
+
+2-Correspondência entre o sistema e o mundo real.
+
+3-Liberdade e controle do usuário.
+
+4-Consistência e padrões.
+
+5-Prevenção de erros.
+
+6- Reconhecer ao invés de lembrar.
+
+7-Flexibilidade e eficiência.
+
+8-Estética e Design minimalista.
+
+9-Auxiliar usuários a reconhecer, diagnosticar e recuperar erros.
+
+10- Ajuda e documentação.
+
+
+![](img/Teste-de-Usabilidade.png)
+
+
 **Conclusão**
 
 A maioria dos participantes considerou que o sistema de cadastro de igrejas é bem organizado, limpo, muito útil e fácil de usar. Ter um site centralizado para manter um banco de dados dos membros das igrejas e tendo acesso a informações é fundamental para uma melhora na administração das igrejas. A implementação/atualizações, recomendações e a continuidade do trabalho com os usuários garantirá um site contínuo centrado na sua função primordial, manter um banco de dados seguro e de fácil usabilidade.
