@@ -3,7 +3,6 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import {useEffect, useState} from 'react';
 
 export const NaoBatizados = function (props) {
-  console.log(">>>>>>>>>>>>> nao batizados", props.values)
   return (
     <Card {...props}>
       <CardContent>
