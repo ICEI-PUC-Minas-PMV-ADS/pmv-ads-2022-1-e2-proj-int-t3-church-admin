@@ -7,7 +7,7 @@ import { customers } from '../__mocks__/customers';
 import {useEffect, useState} from 'react';
 import axios from "axios";
 
-const Customers = function () {
+const Listagem = function () {
 
   const [membros, setMembro] = useState([])
   const [loading, setLoading] = useState(true)
@@ -31,7 +31,7 @@ const Customers = function () {
       <>
         <Head>
           <title>
-            Customers
+            Listagem | Church Admin
           </title>
         </Head>
         <Box
@@ -60,10 +60,10 @@ const Customers = function () {
     </>
   );
 } 
-Customers.getLayout = (page) => (
+Listagem.getLayout = (page) => (
   <DashboardLayout>
     {page}
   </DashboardLayout>
 );
 
-export default Customers;
+export default Listagem;

@@ -25,12 +25,12 @@ const items = [
     title: 'Dashboard'
   },
   {
-    href: '/products',
+    href: '/cadastro',
     icon: (<UserAdd fontSize="small" />),
     title: 'Cadastrar'
   },
   {
-    href: '/customers',
+    href: '/listagem',
     icon: (<UsersIcon fontSize="small" />),
     title: 'Listar'
   },

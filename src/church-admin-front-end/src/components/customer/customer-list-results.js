@@ -16,6 +16,13 @@ import {
   Typography,
   Button
 } from '@mui/material';
+
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+
 import { getInitials } from '../../utils/get-initials';
 
 import EditIcon from '@mui/icons-material/Edit';
@@ -29,6 +36,8 @@ export const CustomerListResults = ({ customers, ...rest }) => {
   const [selectedCustomerIds, setSelectedCustomerIds] = useState([]);
   const [limit, setLimit] = useState(10);
   const [page, setPage] = useState(0);
+  const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState({})
 
   const handleSelectAll = (event) => {
     let newSelectedCustomerIds;
@@ -70,9 +79,11 @@ export const CustomerListResults = ({ customers, ...rest }) => {
     setPage(newPage);
   };
 
-  async function deleteMembro(membro) {
+  async function deleteMembro() {
     const baseURL = "https://localhost:5001/v1/DeletarMembro"
-    axios.delete(baseURL, { data: membro }).then(() => document.location.reload(true));
+    axios.delete(baseURL, { data: selected }).then(() => document.location.reload(true));
+    setSelected({})
+    setOpen(false);
   }
 
   async function editarMembro(membro) {
@@ -83,8 +94,40 @@ export const CustomerListResults = ({ customers, ...rest }) => {
     await localStorage.setItem("selected", JSON.stringify(membro));
   }
 
+  const handleClickOpen = (membro) => {
+    setSelected(membro)
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setSelected({})
+    setOpen(false);
+  };
+
+
   return (
     <Card {...rest}>
+       <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {"Atenção!!!"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Deseja realmente excluir este membro?
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={deleteMembro}>Sim</Button>
+          <Button onClick={handleClose} autoFocus>
+            Não
+          </Button>
+        </DialogActions>
+      </Dialog>
       <PerfectScrollbar>
         <Box sx={{ minWidth: 1050 }}>
           <Table>
@@ -216,7 +259,7 @@ export const CustomerListResults = ({ customers, ...rest }) => {
                               justifyContent: 'center',
                               alignItems: 'center',
                               }}
-                            href="http://localhost:3000/products">
+                            href="http://localhost:3000/cadastro">
                             <EditIcon style={{color: 'white', width: 18}} />
                           </a>
                       </div>
@@ -231,7 +274,7 @@ export const CustomerListResults = ({ customers, ...rest }) => {
                             fontWeight: 'bold',
                             borderRadius: 5
                           }}
-                          onClick={() => deleteMembro(customer)}  
+                          onClick={() => handleClickOpen(customer)}  
                         >
                           <DeleteForeverIcon style={{color: 'white', width: 18}} />
                       </div>
