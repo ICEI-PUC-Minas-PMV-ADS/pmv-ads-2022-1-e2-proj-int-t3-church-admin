@@ -66,3 +66,16 @@ C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src
 C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src\API\ChurchAdminAPI\ChurchAdminAPI\obj\Debug\net5.0\ref\ChurchAdminAPI.dll
 C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src\API\ChurchAdminAPI\ChurchAdminAPI\obj\Debug\net5.0\ChurchAdminAPI.pdb
 C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src\API\ChurchAdminAPI\ChurchAdminAPI\obj\Debug\net5.0\ChurchAdminAPI.genruntimeconfig.cache
+C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src\API\ChurchAdminAPI\ChurchAdminAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src\API\ChurchAdminAPI\ChurchAdminAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src\API\ChurchAdminAPI\ChurchAdminAPI\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src\API\ChurchAdminAPI\ChurchAdminAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src\API\ChurchAdminAPI\ChurchAdminAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src\API\ChurchAdminAPI\ChurchAdminAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src\API\ChurchAdminAPI\ChurchAdminAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src\API\ChurchAdminAPI\ChurchAdminAPI\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src\API\ChurchAdminAPI\ChurchAdminAPI\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src\API\ChurchAdminAPI\ChurchAdminAPI\bin\Debug\net5.0\DinkToPdf.dll
+C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src\API\ChurchAdminAPI\ChurchAdminAPI\bin\Debug\net5.0\libwkhtmltox.dll
+C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src\API\ChurchAdminAPI\ChurchAdminAPI\bin\Debug\net5.0\libwkhtmltox.dylib
+C:\Users\Meriane\Documents\github\pmv-ads-2022-1-e2-proj-int-t3-church-admin\src\API\ChurchAdminAPI\ChurchAdminAPI\bin\Debug\net5.0\libwkhtmltox.so

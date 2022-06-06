@@ -15,7 +15,7 @@ namespace ChurchAdminAPI.Conexoes
         }
 
 
-        // MEMBRO
+        //MEMBRO
         public void CadastrarMembro(Models.Membro membro)
         {
             try
@@ -89,7 +89,7 @@ namespace ChurchAdminAPI.Conexoes
                     cmd.Parameters.AddWithValue("Status", membro.Status);
                     cmd.ExecuteNonQuery();
                 }
-                 
+
             }
             finally
             {
@@ -166,7 +166,7 @@ namespace ChurchAdminAPI.Conexoes
             }
         }
 
-        public void DeletarMembro(Models.Membro membro)
+        public void DeletarMembro(string matricula)
         {
             try
             {
@@ -177,17 +177,17 @@ namespace ChurchAdminAPI.Conexoes
 
                 using (var cmd = new SqlCommand(sql, _conexao))
                 {
-                    cmd.Parameters.AddWithValue("@Matricula", membro.Matricula);
-                    cmd.ExecuteNonQuery();
-                    
+                    cmd.Parameters.AddWithValue("@Matricula", matricula);
+                    if (cmd.ExecuteNonQuery() == 0)
+                    {
+                        throw new InvalidOperationException("Matrícula não encontrada!");
+                    }
                 }
-
             }
             finally
             {
                 _conexao.Close();
             }
-
         }
 
         public List<Models.Membro> ListarMembros()
@@ -227,7 +227,42 @@ namespace ChurchAdminAPI.Conexoes
                         membro.CargoIgreja = rdr["CargoIgreja"].ToString();
                         membro.IgrejaID = Convert.ToInt32(rdr["IgrejaID"]);
                         membro.Status = Convert.ToBoolean(rdr["Status"]);
-      
+
+                        membros.Add(membro);
+                    }
+
+                }
+            }
+            finally
+            {
+                _conexao.Close();
+            }
+
+            return membros;
+        }
+        public List<Models.Membro> ListarMembrosPdf()
+        {
+            var membros = new List<Models.Membro>();
+            try
+            {
+                _conexao.Open();
+
+                string sql = @"Select * FROM Membro";
+
+                using (var cmd = new SqlCommand(sql, _conexao))
+                {
+                    var rdr = cmd.ExecuteReader();
+
+                    while (rdr.Read())
+                    {
+                        var membro = new Models.Membro();
+                        membro.Matricula = Convert.ToInt32(rdr["Matricula"]);
+                        membro.Nome = rdr["Nome"].ToString();          
+                        membro.Municipio = rdr["Municipio"].ToString();
+                        membro.Estado = rdr["Estado"].ToString();
+                        membro.Fone = rdr["Fone"].ToString();
+                        membro.CargoIgreja = rdr["CargoIgreja"].ToString();
+                     
                         membros.Add(membro);
                     }
 
@@ -242,7 +277,7 @@ namespace ChurchAdminAPI.Conexoes
         }
 
 
-        // IGREJA
+        //IGREJA
         public void CadastrarIgreja(Models.Igreja igreja)
         {
             try
@@ -360,7 +395,12 @@ namespace ChurchAdminAPI.Conexoes
                     cmd.Parameters.AddWithValue("Email", igreja.Email);
 
                     cmd.ExecuteNonQuery();
-                
+
+                    if (cmd.ExecuteNonQuery() == 0)
+                    {
+                        throw new InvalidOperationException("O membro não foi atualizado!");
+                    }
+
                 }
             }
             finally
@@ -370,7 +410,7 @@ namespace ChurchAdminAPI.Conexoes
             }
         }
 
-        public void DeletarIgreja(Models.Igreja igreja)
+        public void DeletarIgreja(int id)
         {
             try
             {
@@ -381,8 +421,11 @@ namespace ChurchAdminAPI.Conexoes
 
                 using (var cmd = new SqlCommand(sql, _conexao))
                 {
-                    cmd.Parameters.AddWithValue("@Id", igreja.Id);
-                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    if (cmd.ExecuteNonQuery() == 0)
+                    {
+                        throw new InvalidOperationException("Id não encontrado!");
+                    }
 
                 }
 
@@ -443,7 +486,43 @@ namespace ChurchAdminAPI.Conexoes
         }
 
 
+        //USUARIO
+        public Models.Usuario BuscarUsuario(string login, string senha)
+        {
+            try
+            {
+                _conexao.Open();
 
+                string query = @"Select * FROM USUARIO
+                                 WHERE login = @login
+                                 AND senha = @senha";
 
+                using (var cmd = new SqlCommand(query, _conexao))
+                {
+                    cmd.Parameters.AddWithValue("@login", login);
+                    cmd.Parameters.AddWithValue("@senha", senha);
+
+                    var rdr = cmd.ExecuteReader();
+
+                    if (rdr.Read())
+                    {
+                        var usuario = new Models.Usuario();
+                        usuario.Login = login;
+                        usuario.Senha = rdr["senha"].ToString();
+
+                        return usuario;
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException("Email ou senha Inválidos!");
+                    }
+                }
+            }
+            finally
+            {
+                _conexao.Close();
+            }
+
+        }
     }
 }
