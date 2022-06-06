@@ -1,22 +1,51 @@
-﻿.header {
+﻿/*.header {
     text-align: center;
-    color: green;
-    padding-bottom: 35px;
+    color: midnightblue;
+    padding-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size:smaller;
 }
 
 table {
-    width: 80%;
+    width: 95%;
     border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
 }
 
-td, th{
+td, th {
     border: 1px solid gray;
-    padding: 15px;
-    font-size: 22px;
+    padding: 10px;
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+table th {
+    background-color: midnightblue;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: smaller;
     text-align: center;
 }
 
-table th{
-    background-color:green;
-    color:white;
+*/
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    width: 95%;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
 }

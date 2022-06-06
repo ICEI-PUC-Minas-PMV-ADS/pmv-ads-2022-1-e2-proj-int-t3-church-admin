@@ -21,30 +21,30 @@ namespace ChurchAdminAPI.Controllers
         {
             try
             {
-                if (!Utils.Validacao.ValidaCpf(membro.Cpf))
-                {
-                    throw new InvalidOperationException("Cpf inválido!");
-                }
+                //if (!Utils.Validacao.ValidaCpf(membro.Cpf))
+                //{
+                //    throw new InvalidOperationException("Cpf inválido!");
+                //}
 
-                if (string.IsNullOrWhiteSpace(membro.Nome) || membro.Nome.Length < 1 || membro.Nome.Length > 80)
-                {
-                    throw new InvalidOperationException("O nome deve conter entre 1 a 80 caracteres.");
-                }
+                //if (string.IsNullOrWhiteSpace(membro.Nome) || membro.Nome.Length < 1 || membro.Nome.Length > 80)
+                //{
+                //    throw new InvalidOperationException("O nome deve conter entre 1 a 80 caracteres.");
+                //}
 
-                if (!Utils.Validacao.ValidaCep(membro.Cep))
-                {
-                    throw new InvalidOperationException("CEP inválido!"); 
-                }
+                //if (!Utils.Validacao.ValidaCep(membro.Cep))
+                //{
+                //    throw new InvalidOperationException("CEP inválido!");
+                //}
 
-                if (!Utils.Validacao.ValidaEmail(membro.Email))
-                {
-                    throw new InvalidOperationException("Email inválido!");
-                }
+                //if (!Utils.Validacao.ValidaEmail(membro.Email))
+                //{
+                //    throw new InvalidOperationException("Email inválido!");
+                //}
 
-                if (membro.Sexo.ToString() != "F"|| membro.Sexo.ToString() != "M" || membro.Sexo.ToString() != "ND" )
-                {
-                    throw new InvalidOperationException("Digite M para sexo masculino, F para feminino ou ND para quem prefere não declarar.");
-                }
+                //if (membro.Sexo.ToString() != "F" || membro.Sexo.ToString() != "M" || membro.Sexo.ToString() != "ND")
+                //{
+                //    throw new InvalidOperationException("Digite M para sexo masculino, F para feminino ou ND para quem prefere não declarar.");
+                //}
 
                 _sql.CadastrarMembro(membro);
 
