@@ -35,7 +35,7 @@ export const CustomerListToolbar = (props) => (
         >
           Export
         </Button>
-        <a href="http://localhost:3000/products">
+        <a href="http://localhost:3000/cadastro">
           <Button
             color="primary"
             variant="contained"

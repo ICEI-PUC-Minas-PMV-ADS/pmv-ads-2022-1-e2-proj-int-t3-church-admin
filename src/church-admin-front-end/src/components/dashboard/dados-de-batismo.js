@@ -3,21 +3,23 @@ import { Box, Card, CardContent, CardHeader, Divider, Typography, useTheme } fro
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import PhoneIcon from '@mui/icons-material/Phone';
 import TabletIcon from '@mui/icons-material/Tablet';
+import {useEffect, useState} from 'react';
 
-export const TrafficByDevice = (props) => {
+export const DadosDeBatismo = (props) => {
+
   const theme = useTheme();
 
   const data = {
     datasets: [
       {
-        data: [63, 15, 22],
-        backgroundColor: ['#3F51B5', '#e53935', '#FB8C00'],
+        data: [props.values.batizados, props.values.naoBatizados],
+        backgroundColor: ['#3F51B5', '#e53935'],
         borderWidth: 8,
         borderColor: '#FFFFFF',
         hoverBorderColor: '#FFFFFF'
       }
     ],
-    labels: ['Desktop', 'Tablet', 'Mobile']
+    labels: ['Batizados', 'Não batizados']
   };
 
   const options = {
@@ -44,28 +46,22 @@ export const TrafficByDevice = (props) => {
 
   const devices = [
     {
-      title: 'Desktop',
-      value: 63,
+      title: 'Batizados',
+      value: props.values.batizados,
       icon: LaptopMacIcon,
       color: '#3F51B5'
     },
     {
-      title: 'Tablet',
-      value: 15,
+      title: 'Não batizados',
+      value: props.values.naoBatizados,
       icon: TabletIcon,
       color: '#E53935'
-    },
-    {
-      title: 'Mobile',
-      value: 23,
-      icon: PhoneIcon,
-      color: '#FB8C00'
     }
   ];
 
   return (
     <Card {...props}>
-      <CardHeader title="Traffic by Device" />
+      <CardHeader title="Dados de batismo" />
       <Divider />
       <CardContent>
         <Box
@@ -88,7 +84,6 @@ export const TrafficByDevice = (props) => {
         >
           {devices.map(({
             color,
-            icon: Icon,
             title,
             value
           }) => (
@@ -99,7 +94,6 @@ export const TrafficByDevice = (props) => {
                 textAlign: 'center'
               }}
             >
-              <Icon color="action" />
               <Typography
                 color="textPrimary"
                 variant="body1"
