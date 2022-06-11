@@ -37,7 +37,17 @@ Conforme o CT-06, o teste foi executado com sucesso. O botão de deletar foi inc
 
 ![Deletar membro](img/Deletar_membro.png)
 
+## CT-07- Exportar informações de cadastro
+
+Conforme o CT-07, o  teste foi executado com sucesso. Ao clicar no botão de exportar, o usuário consegue exportar as informações em um arquivo PDF. 
+
+![Exportar arquivo](img/export.jpg)
+
+Arquivo gerado em PDF, com as informações dos membros.
+
+![PDF](img/pdf.jpg)
+
 
 ## Avaliação
 
-Todos os testes foram executados com sucesso conforme o plano de teste proposto. Tanto o front-end, quando o back-end tiveram uma boa integração para que os resultados fossem alcançados. Para proxima etapa, serão incluídas novas funcionalidades e atualizado os planos de testes conforme a implementação. 
+Todos os testes foram executados com sucesso conforme o plano de teste proposto. Tanto o front-end, quando o back-end tiveram uma boa integração para que os resultados fossem alcançados. Conseguimos incluir a funcionalidade de exportar um arquivo em PDF com as informações de cadastro, conforme proposto inicialmente. 

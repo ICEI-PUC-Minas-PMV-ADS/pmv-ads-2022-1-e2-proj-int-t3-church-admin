@@ -10,17 +10,18 @@ Os desenvolvedores Web Front-end e Back-end junto com os demais integrantes do g
 
 As funcionalidades a seguir são as principais que foram usadas para que o teste da aplicação/página fosse concluído com êxito.
 
-1. _Cadastrar Pessoa_: Realizar o preenchimento dos campos de _Informações Pessoais_ _e_ de  _Localidade_ da página de cadastro. Após preenchimento de todos os campos requeridos, o usuário irá clicar no botão SALVAR.
+1)  *Cadastrar Membro* : Realizar o preenchimento dos campos de *Informações Pessoais* e de *Localidade* da página de cadastro. Após preenchimento de todos os campos requeridos, o usuário     irá clicar no botão SALVAR.  
 
-2. _Deletar Pessoa_ : Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar na lupa.  
-Após visualização dos dados, clicar no botão deletar e confirmar pergunta do pop-up, clicando novamente em um botão para a confirmação da ação de exclusão.
+2)  *Cosultar membro* : Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar em consultar.  
+    Após visualização dos dados, clicar no botão de consultar.
 
-3. _Atualizar Pessoa_ : Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar na lupa.  
-Após visualização dos dados, clicar no botão atualizar e confirmar pergunta do pop-up, clicando novamente em um botão para a confirmação da ação de atualização.
+3)  *Deletar Membro* : Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar em deletar.  
+    Após visualização dos dados, clicar no botão deletar e confirmar pergunta do pop-up, clicando novamente em um botão para a confirmação da ação de exclusão. 
 
-4. _Selecionar Pessoa_: Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar na lupa. Visualizar os dados.
+4)  *Atualizar Membro* : Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar em editar.  
+    Após visualização dos dados, clicar no botão atualizar e confirmar pergunta do pop-up, clicando novamente em um botão para a confirmação da ação de atualização.  
 
-5. _Exportar dados_: Clicar no botão exportar, após fazer o passo 4 para selecionar os dados. Visualize o arquivo de retorno.
+5)  *Exportar dados* : Clicar no botão exportar, após fazer o passo 4 para selecionar os dados. Visualize o arquivo de retorno. 
 
 **Metodologia**
 
@@ -38,39 +39,36 @@ Nota 4- Muito bom (experimentar e iterar)
 
 Nota 5- Excelente (pronto para testar em produção)
 
+### **CADASTRAR**
 |        ATIVIDADE A SER REALIZADA      | FEEDBACK DO USUÁRIO  |    CONSIDERAÇÕES    |   SUGESTÃO DE MELHORIAS | AVALIAÇÃO (DE 1 A 5)  |
 |---------------------------------------|----------------------|---------------------|-------------------------|-----------------------|
-|Cadastrar membro                       |                      |                     |                         |                       |
-|Cadastrar membro                       |                      |                     |                         |                       |
-|Cadastrar membro                       |                      |                     |                         |                       |
-|Cadastrar membro                       |                      |                     |                         |                       |
+|Cadastrar membro                       |  O cadastramento de membros está intutivo, basta preencher as informações dos usuários de forma correta e clicar em salvar.                   | Interface clara e intuitiva                 |     Nada a acrescentar                    |          5             |
+|Cadastrar membro                       |        Tela de cadastro de fácil preenchimento              |           Bonita interface e fácil de entender         |         O botão de salvar poderia ser maior               |            5           |
 
-
-### CONSULTAR
+### **CONSULTAR**
 |        ATIVIDADE A SER REALIZADA      | FEEDBACK DO USUÁRIO  |    CONSIDERAÇÕES    |   SUGESTÃO DE MELHORIAS | AVALIAÇÃO (DE 1 A 5)  |
 |---------------------------------------|----------------------|---------------------|-------------------------|-----------------------|
-|Consultar membro                       |                      |                     |                         |                       |
-|Consultar membro                       |                      |                     |                         |                       |
-|Consultar membro                       |                      |                     |                         |                       |
-|Consultar membro                       |                      |                     |                         |                       |
+|Consultar membro                       |   A tela de lista de membros está funcional                   |   A tela está bem fácil de usar                  |   Ao abrir a tela os membros poderiam já estar em ordem alfabética                      |                5       |
+|Consultar membro                       |   A listagem de membros está funcionando bem, fácil de utilizar                   |       Boas funcionalidades e os botões de ações estão bem intuitivos              |            Tamanho dos botões de ações poderiam ser maiores             |         5              |
 
-
-
-### LOGIN
+### **DELETAR**
 |        ATIVIDADE A SER REALIZADA      | FEEDBACK DO USUÁRIO  |    CONSIDERAÇÕES    |   SUGESTÃO DE MELHORIAS | AVALIAÇÃO (DE 1 A 5)  |
 |---------------------------------------|----------------------|---------------------|-------------------------|-----------------------|
-|Login membro                           |                      |                     |                         |                       |
-|Login membro                           |                      |                     |                         |                       |
-|Login membro                           |                      |                     |                         |                       |
-|Login membro                           |                      |                     |                         |                       |
+|Deletar membro                           | Fácil de utilizar                     |       Nada a acrescentar, bem simples e fácil              |       Sem sugestões de melhorias                   |    5                 |
+|Deletar membro                           |          Botão bem intuivo e direto ao ponto            |           Bem simples e intuitivo          |         Sem sugestoões                 |               5        |
 
-### INFORMAÇÕES DETALHADAS E DASHBOARD
+### **ATUALIZAR**
 |        ATIVIDADE A SER REALIZADA      | FEEDBACK DO USUÁRIO  |    CONSIDERAÇÕES    |   SUGESTÃO DE MELHORIAS | AVALIAÇÃO (DE 1 A 5)  |
 |---------------------------------------|----------------------|---------------------|-------------------------|-----------------------|
-|Visualizar membro                      |                      |                     |                         |                       |
-|Visualizar membro                      |                      |                     |                         |                       |
-|Visualizar membro                      |                      |                     |                         |                       |
-|Visualizar membro                      |                      |                     |                         |                       |
+|Atualizar membro |        Boa funcionalidade, bem útil caso seja necessário atualizar alguma informação  |          Fácil de utilizar e atualizar cadastros           |         Poderia ficar de outra cor o campo atualizado, antes de clicar em atualizar                |        5               |
+|Atualizar membro                           |     Tela bem intuitiva, e assim como cadastrar, de fácil utilização                 |    Boa funcionalidade                 |          Sem sugestões               |                5       |
+
+
+### **EXPORTAR PDF**
+|        ATIVIDADE A SER REALIZADA      | FEEDBACK DO USUÁRIO  |    CONSIDERAÇÕES    |   SUGESTÃO DE MELHORIAS | AVALIAÇÃO (DE 1 A 5)  |
+|---------------------------------------|----------------------|---------------------|-------------------------|-----------------------|
+|Exportar PDF                    |      Muito boa funcionalidade, e fácil de ser utilizada, apenas selecionando o membro e clicando em exportar                |        Funcionalidade bem útil para armazenar informações dos usuários fora do sistema             |      Gostaria que o PDF tivesse todas as informações em uma única página                    |      5                 |
+|Exportar PDF                    |    Fácil de exportar informções dos membros                 |     Boa funcionalidade, para poder imprimir as informações dos membros                |     Poderia no inicio do PDF sair com nome da Igreja                    |             5          |
 
 
 **Conclusão**

@@ -51,11 +51,10 @@ A tabela a seguir apresenta os requisitos do projeto, identificando a prioridade
 |----------|-----------------------------------------|----|
 |RF-001    | O sistema deve ser capaz de cadastrar os dados dos membros da igreja | ALTA |
 |RF-002    | O sistema deve ser capaz de listar os dados dos membros da igreja | ALTA |
-|RF-003    | O sistema deve ser capaz de atualizar os dados dos membros da igreja | ALTA |
+|RF-003    | O sistema deve ser capaz de atualizar os dados dos membros da igreja | ALTA|
 |RF-004    | O sistema deve ser capaz de deletar os dados dos membros da igreja | ALTA |
-|RF-005    | O sistema deve ser capaz de filtrar por idade, status,filial e situação de batismo | MÉDIA |
-|RF-006    | O sistema deve ser capaz exportar os dados em PDF ou XLSX | MÉDIA |
-|RF-007    | O sistema deve permitir o acesso dos usuários através do login e senha | ALTA |
+|RF-005    | O sistema deve ser capaz exportar os dados em PDF | MÉDIA |
+
 
 ### Requisitos não Funcionais
 

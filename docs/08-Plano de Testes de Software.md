@@ -45,5 +45,13 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir:
 | **Objetivo do teste**  | Verificar na página de consultar, se o botão de deletar leva a confirmação para deletar o membro |
 |  **Critérios de Êxito** |O botão deve garantir a exclusão dos dados no banco de dados e as informações de cadastro devem sumir da página de consulta|
 
+|  Caso de teste | CT-07- Exportar informações de cadastro|
+| :------------ | :------------ |
+| **Requisito Associado**  |  RF-005 O sistema deve ser capaz de exportar em PDF informações de cadastro |
+| **Objetivo do teste**  | Verificar a funcionalidade de exportar em PDF informações dobre cadastro dos membros da igreja |
+|  **Critérios de Êxito** |A clicar no botão de exportar, deve ser gerado um PDF com as informações dos membros|
+
+
+
 
 

@@ -16,15 +16,16 @@
 
 ### Realizar os procedimentos das seguintes funcionalidades:  
 
-1)  *Cadastrar Pessoa* : Realizar o preenchimento dos campos de *Informações Pessoais* e de *Localidade* da página de cadastro. Após preenchimento de todos os campos requeridos, o usuário     irá clicar no botão SALVAR.  
+1)  *Cadastrar Membro* : Realizar o preenchimento dos campos de *Informações Pessoais* e de *Localidade* da página de cadastro. Após preenchimento de todos os campos requeridos, o usuário     irá clicar no botão SALVAR.  
 
-2)  *Deletar Pessoa* : Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar na lupa.  
+2)  *Cosultar membro* : Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar em consultar.  
+    Após visualização dos dados, clicar no botão de consultar.
+
+3)  *Deletar Membro* : Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar em deletar.  
     Após visualização dos dados, clicar no botão deletar e confirmar pergunta do pop-up, clicando novamente em um botão para a confirmação da ação de exclusão. 
 
-3)  *Atualizar Pessoa* : Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar na lupa.  
+4)  *Atualizar Membro* : Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar em editar.  
     Após visualização dos dados, clicar no botão atualizar e confirmar pergunta do pop-up, clicando novamente em um botão para a confirmação da ação de atualização.  
-
-4)  *Selecionar Pessoa* : Escolher o parâmetro a ser filtrado, digitar o dado a ser buscado, e clicar na lupa. Visualizar os dados. 
 
 5)  *Exportar dados* : Clicar no botão exportar, após fazer o passo 4 para selecionar os dados. Visualize o arquivo de retorno. 
 
@@ -48,42 +49,6 @@ Nota 3-  Mediano (alterações pontuais)
 Nota 4-  Muito bom (experimentar e iterar) 
 
 Nota 5-  Excelente (pronto para testar em produção) 
-
-### CADASTRAR
-|        ATIVIDADE A SER REALIZADA      | FEEDBACK DO USUÁRIO  |    CONSIDERAÇÕES    |   SUGESTÃO DE MELHORIAS | AVALIAÇÃO (DE 1 A 5)  |
-|---------------------------------------|----------------------|---------------------|-------------------------|-----------------------|
-|Cadastrar membro                       |                      |                     |                         |                       |
-|Cadastrar membro                       |                      |                     |                         |                       |
-|Cadastrar membro                       |                      |                     |                         |                       |
-|Cadastrar membro                       |                      |                     |                         |                       |
-
-
-### CONSULTAR
-|        ATIVIDADE A SER REALIZADA      | FEEDBACK DO USUÁRIO  |    CONSIDERAÇÕES    |   SUGESTÃO DE MELHORIAS | AVALIAÇÃO (DE 1 A 5)  |
-|---------------------------------------|----------------------|---------------------|-------------------------|-----------------------|
-|Consultar membro                       |                      |                     |                         |                       |
-|Consultar membro                       |                      |                     |                         |                       |
-|Consultar membro                       |                      |                     |                         |                       |
-|Consultar membro                       |                      |                     |                         |                       |
-
-
-
-### LOGIN
-|        ATIVIDADE A SER REALIZADA      | FEEDBACK DO USUÁRIO  |    CONSIDERAÇÕES    |   SUGESTÃO DE MELHORIAS | AVALIAÇÃO (DE 1 A 5)  |
-|---------------------------------------|----------------------|---------------------|-------------------------|-----------------------|
-|Login membro                           |                      |                     |                         |                       |
-|Login membro                           |                      |                     |                         |                       |
-|Login membro                           |                      |                     |                         |                       |
-|Login membro                           |                      |                     |                         |                       |
-
-### INFORMAÇÕES DETALHADAS E DASHBOARD
-|        ATIVIDADE A SER REALIZADA      | FEEDBACK DO USUÁRIO  |    CONSIDERAÇÕES    |   SUGESTÃO DE MELHORIAS | AVALIAÇÃO (DE 1 A 5)  |
-|---------------------------------------|----------------------|---------------------|-------------------------|-----------------------|
-|Visualizar membro                      |                      |                     |                         |                       |
-|Visualizar membro                      |                      |                     |                         |                       |
-|Visualizar membro                      |                      |                     |                         |                       |
-|Visualizar membro                      |                      |                     |                         |                       |
-
 
 
 &nbsp;
