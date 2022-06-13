@@ -23,7 +23,9 @@ O foco do trabalho está em melhorar a produtividade da administração, de form
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Conforme decisão do grupo, foi separado o frontend do backend em dois repositórios separados deste, sendo: <br>
+<li><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/church-admin-front-end">Frontend</a></li>
+<li><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/church-admin-back-end">Backend</a></li>
 
 # Documentação
 
