@@ -1,5 +1,17 @@
 # Registro de Testes de Software
 
+Tabela de resumo com os resultados dos testes.
+
+|  Caso de teste | Descrição  | Resultado |
+| :------------: | :------------ |:------------: |
+| CT-01 |  Cadastramento de membros  | Sucesso|
+| CT-02 |  Consulta de membros | Sucesso|
+| CT-03 |  Funcionalidade do botão de visualizar | Sucesso|
+| CT-04 |  Informações detalhadas  | Sucesso|
+| CT-05 |  Funcionalidade de atualizar cadastro  | Sucesso|
+| CT-06 |  Funcionalidade do botão de deletar cadastros  | Sucesso|
+| CT-07 |  Exportar informações de cadastro  | Sucesso|
+
 ## CT-01- Cadastramento de membros
 
 Conforme o CT-01, o teste foi executado com sucesso. Todas os campos preecnhidos e enviados, são armazenados e dado como salvo com sucesso.
