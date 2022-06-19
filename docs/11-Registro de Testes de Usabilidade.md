@@ -39,6 +39,18 @@ Nota 4- Muito bom (experimentar e iterar)
 
 Nota 5- Excelente (pronto para testar em produção)
 
+**Resultados**
+
+Tabela com resumo dos resultados.
+
+|  Funcionalidades | Média de Notas | Resultado |
+| :------------ | :------------: |:------------ |
+| Cadastrar Membro |  5  | Pronto para produção|
+| Consultar Membro |  5  | Pronto para produção|
+| Deletar Membro |  5  | Pronto para produção|
+| Atualizar Membro |  5  | Pronto para produção|
+| Exportar Dados |  5  | Pronto para produção|
+
 ### **CADASTRAR**
 |        ATIVIDADE A SER REALIZADA      | FEEDBACK DO USUÁRIO  |    CONSIDERAÇÕES    |   SUGESTÃO DE MELHORIAS | AVALIAÇÃO (DE 1 A 5)  |
 |---------------------------------------|----------------------|---------------------|-------------------------|-----------------------|
