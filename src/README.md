@@ -1,11 +1,8 @@
 # Instruções de utilização
 
-## Instalação do Site
+## Repositório front-end
 
-O site em HTML/CSS/JS é um projeto estático, logo pode ser utilizado tanto em servidores...
+[https://github.com/ICEI-PUC-Minas-PMV-ADS/church-admin-front-end](https://github.com/ICEI-PUC-Minas-PMV-ADS/church-admin-front-end)
+## Repositório back-end
 
-## Histórico de versões
-
-### [0.1.0] - DD/MM/AAAA
-#### Adicionado
-- Adicionado ...
+[https://github.com/ICEI-PUC-Minas-PMV-ADS/church-admin-back-end](https://github.com/ICEI-PUC-Minas-PMV-ADS/church-admin-back-end)
