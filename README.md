@@ -28,7 +28,7 @@ Conforme decisão do grupo, foi separado o frontend do backend em dois repositó
 <li><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/church-admin-back-end">Backend</a></li>  <br>
 
 Para acessar o sistema, basta clicar no nome abaixo:  <br>
-<li><a href="https://church-admin-front-end.vercel.app/">Church Admin</a></li>
+<li><a href="https://church-admin-front-end-published.vercel.app/">Church Admin</a></li>
 
 # Documentação
 
