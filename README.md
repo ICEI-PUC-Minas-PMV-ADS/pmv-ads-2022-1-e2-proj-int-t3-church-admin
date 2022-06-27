@@ -25,7 +25,10 @@ O foco do trabalho está em melhorar a produtividade da administração, de form
 
 Conforme decisão do grupo, foi separado o frontend do backend em dois repositórios separados deste, sendo: <br>
 <li><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/church-admin-front-end">Frontend</a></li>
-<li><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/church-admin-back-end">Backend</a></li>
+<li><a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/church-admin-back-end">Backend</a></li>  <br>
+
+Para acessar o sistema, basta clicar no nome abaixo:  <br>
+<li><a href="https://church-admin-front-end.vercel.app/">Church Admin</a></li>
 
 # Documentação
 
